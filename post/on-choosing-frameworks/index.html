@@ -1,0 +1,679 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>On Choosing Frameworks</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.17" />
+        
+
+
+        
+        
+            
+                <meta name="description" content="Thoughts on Tech">
+            
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="On Choosing Frameworks"/>
+<meta name="twitter:description" content="A friend of mine who is an experienced systems programmer was working on familiarizing himself with web development, and he was overwhelmed by all the choices he had to make. This was my advice to him:
+ The explosion of frameworks is a headache for everyone, but you don&rsquo;t have to know all of them, because no one does. You&rsquo;re just going to have to pick a couple and go with them for a while."/>
+<meta name="twitter:site" content="@beppu"/>
+
+
+        <meta property="og:title" content="On Choosing Frameworks" />
+<meta property="og:description" content="A friend of mine who is an experienced systems programmer was working on familiarizing himself with web development, and he was overwhelmed by all the choices he had to make. This was my advice to him:
+ The explosion of frameworks is a headache for everyone, but you don&rsquo;t have to know all of them, because no one does. You&rsquo;re just going to have to pick a couple and go with them for a while." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://beppu.github.io/post/on-choosing-frameworks/" />
+
+
+<meta property="og:updated_time" content="2016-10-18T14:50:07-07:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="On Choosing Frameworks">
+<meta itemprop="description" content="A friend of mine who is an experienced systems programmer was working on familiarizing himself with web development, and he was overwhelmed by all the choices he had to make. This was my advice to him:
+ The explosion of frameworks is a headache for everyone, but you don&rsquo;t have to know all of them, because no one does. You&rsquo;re just going to have to pick a couple and go with them for a while.">
+
+
+<meta itemprop="dateModified" content="2016-10-18T14:50:07-07:00" />
+<meta itemprop="wordCount" content="495">
+
+
+
+<meta itemprop="keywords" content="frameworks,libraries," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <link rel="stylesheet" href="/css/main.min.css" />
+                
+            
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Beppu&#39;s Blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/categories">
+                        Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://beppu.github.io/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://beppu.github.io/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://beppu.github.io/post/on-choosing-frameworks/"><p>On Choosing Frameworks</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&text=On%20Choosing%20Frameworks&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://beppu.github.io/post/on-choosing-frameworks/">On Choosing Frameworks</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-10-18'>
+            October 18, 2016</time>
+        <span class="author"></span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&text=On%20Choosing%20Frameworks&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f&title=On%20Choosing%20Frameworks" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fbeppu.github.io%2fpost%2fon-choosing-frameworks%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        <p>A friend of mine who is an experienced systems programmer was working on familiarizing himself with web development, and he was overwhelmed by all the choices he had to make.  This was my advice to him:</p>
+
+<blockquote>
+<p>The explosion of frameworks is a headache for everyone, but you don&rsquo;t have to know all of them, because no one does.  You&rsquo;re just going to have to pick a couple and go with them for a while.</p>
+
+<p>On the server side, there are many adequate frameworks these days.  What you should pick is largely determined by what server side language you&rsquo;re comfortable with.  This filter reduces the size of the list considerably.  Then, from what&rsquo;s left, pick a framework that is actively being maintained and has good documentation.  As long as they give you good control over HTTP requests and responses, you&rsquo;re good to go.  It&rsquo;s hard to go wrong here, because almost anything can be made to work adequately &ndash; HTTP servers are well understood today.</p>
+
+<p>On the client side, there were two major eras of library wars so far.  In the mid to late 2000s, there was a battle between Prototype, jQuery, and a bunch of other Javascript utility libraries.  jQuery was the winner of that era, and it would be good to have basic familiarity with jQuery even though it&rsquo;s gone out of fashion now.</p>
+
+<p>The second major library war on the client side was waged between Backbone, Angular, React, and many others &ndash; too many to name.  This war started in the early 2010s, and it is ongoing, but I believe the winner is React.js.  It has many good qualities going for it, but it is also very different from anything that came before it.</p>
+
+<p>This blog post on React.js was probably the turning point that made a lot of people start taking it seriously.  <a href="http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs">http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs</a></p>
+
+<p>It showed that React.js could be extremely performant while also promoting a style of programming that made client-side UI behavior a lot more predictable than it had been in the past.  (Believe me, it was (and sometimes still is) a mess.)</p>
+
+<p>Another big plus for React.js is that it can be used to develop native Android and iOS applications which few other libraries can claim.  Perhaps no other library can do this, because the main idea behind React.js is to represent your UI as a pure function, and this is a broad idea that isn&rsquo;t confined to just HTML.  This makes it special among the client side libraries.</p>
+
+<p>It&rsquo;s downside (if you could call it that) is that the Facebook engineers who made it are fond of source code transformers, so you&rsquo;re development setup will need to have tools like WebPack, Babel, sometimes Flow, etc&hellip;  configured.  That&rsquo;s a god damned headache, but such is life in the web development world.  Hopefully, you only have to set it up once in the beginning and not worry about it later, but I find it annoying to need all these tools.</p>
+</blockquote>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categoriesframeworks'>frameworks</a></li>
+    
+        <li><a href='/categorieslibraries'>libraries</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shortname';
+    var disqus_identifier = 'http:\/\/beppu.github.io\/post\/on-choosing-frameworks\/';
+    var disqus_title = 'On Choosing Frameworks';
+    var disqus_url = 'http:\/\/beppu.github.io\/post\/on-choosing-frameworks\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Beppu&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>Beppu&#39;s Blog</h2>
+                    <p>My thoughts on technology.</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://beppu.github.io/post/on-choosing-frameworks/">On Choosing Frameworks</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-10-18'>
+                                    October 18, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/frameworks/">frameworks</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/libraries/">libraries</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>I&#39;m currently taking a break from work to study things.</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Beppu&#39;s Blog. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <script src="/js/main.min.js"></script>
+                
+            
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beppu&#39;s Blog</title>
+    <link>http://beppu.github.io/index.xml</link>
+    <description>Recent content on Beppu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Oct 2016 14:50:07 -0700</lastBuildDate>
+    <atom:link href="http://beppu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>On Choosing Frameworks</title>
+      <link>http://beppu.github.io/post/on-choosing-frameworks/</link>
+      <pubDate>Tue, 18 Oct 2016 14:50:07 -0700</pubDate>
+      
+      <guid>http://beppu.github.io/post/on-choosing-frameworks/</guid>
+      <description>&lt;p&gt;A friend of mine who is an experienced systems programmer was working on familiarizing himself with web development, and he was overwhelmed by all the choices he had to make.  This was my advice to him:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The explosion of frameworks is a headache for everyone, but you don&amp;rsquo;t have to know all of them, because no one does.  You&amp;rsquo;re just going to have to pick a couple and go with them for a while.&lt;/p&gt;
+
+&lt;p&gt;On the server side, there are many adequate frameworks these days.  What you should pick is largely determined by what server side language you&amp;rsquo;re comfortable with.  This filter reduces the size of the list considerably.  Then, from what&amp;rsquo;s left, pick a framework that is actively being maintained and has good documentation.  As long as they give you good control over HTTP requests and responses, you&amp;rsquo;re good to go.  It&amp;rsquo;s hard to go wrong here, because almost anything can be made to work adequately &amp;ndash; HTTP servers are well understood today.&lt;/p&gt;
+
+&lt;p&gt;On the client side, there were two major eras of library wars so far.  In the mid to late 2000s, there was a battle between Prototype, jQuery, and a bunch of other Javascript utility libraries.  jQuery was the winner of that era, and it would be good to have basic familiarity with jQuery even though it&amp;rsquo;s gone out of fashion now.&lt;/p&gt;
+
+&lt;p&gt;The second major library war on the client side was waged between Backbone, Angular, React, and many others &amp;ndash; too many to name.  This war started in the early 2010s, and it is ongoing, but I believe the winner is React.js.  It has many good qualities going for it, but it is also very different from anything that came before it.&lt;/p&gt;
+
+&lt;p&gt;This blog post on React.js was probably the turning point that made a lot of people start taking it seriously.  &lt;a href=&#34;http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs&#34;&gt;http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It showed that React.js could be extremely performant while also promoting a style of programming that made client-side UI behavior a lot more predictable than it had been in the past.  (Believe me, it was (and sometimes still is) a mess.)&lt;/p&gt;
+
+&lt;p&gt;Another big plus for React.js is that it can be used to develop native Android and iOS applications which few other libraries can claim.  Perhaps no other library can do this, because the main idea behind React.js is to represent your UI as a pure function, and this is a broad idea that isn&amp;rsquo;t confined to just HTML.  This makes it special among the client side libraries.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s downside (if you could call it that) is that the Facebook engineers who made it are fond of source code transformers, so you&amp;rsquo;re development setup will need to have tools like WebPack, Babel, sometimes Flow, etc&amp;hellip;  configured.  That&amp;rsquo;s a god damned headache, but such is life in the web development world.  Hopefully, you only have to set it up once in the beginning and not worry about it later, but I find it annoying to need all these tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://beppu.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://beppu.github.io/about/</guid>
+      <description>&lt;p&gt;This is where I&amp;rsquo;ll collect my thoughts on technology.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
