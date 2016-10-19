@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beppu&#39;s Blog</title>
+    <link>http://beppu.github.io/categories/hugo/index.xml</link>
+    <description>Recent content on Beppu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://beppu.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Why I Chose Hugo</title>
+      <link>http://beppu.github.io/post/why-i-chose-hugo/</link>
+      <pubDate>Wed, 19 Oct 2016 09:20:15 -0700</pubDate>
+      
+      <guid>http://beppu.github.io/post/why-i-chose-hugo/</guid>
+      <description>
+
+&lt;h3 id=&#34;why-did-you-pick-hugo-and-go-instead-of-github-s-jekyll&#34;&gt;Why did you pick hugo (and Go) instead of github&amp;rsquo;s jekyll?&lt;/h3&gt;
+
+&lt;p&gt;I was initially going to use Jekyll, but when I tried to do a &lt;code&gt;bundle install&lt;/code&gt;, one of the dependencies failed to install.  I didn&amp;rsquo;t feel like fighting that battle, so I decided to try Hugo instead since I had looked at it in the past.&lt;/p&gt;
+
+&lt;p&gt;What I liked about Hugo was that:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;it was fast,&lt;/li&gt;
+&lt;li&gt;it had a nice selection of &lt;strong&gt;&lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;its blogging functionality was adequate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As for Go, it wasn&amp;rsquo;t a major factor in choosing a static site generator for me.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-proficient-you-need-to-be-in-go-to-use-hugo&#34;&gt;How proficient you need to be in Go to use Hugo?&lt;/h3&gt;
+
+&lt;p&gt;You don&amp;rsquo;t need to know Go at all, and I haven&amp;rsquo;t even looked at a line of Hugo&amp;rsquo;s Go code yet.&lt;/p&gt;
+
+&lt;p&gt;However, what you do need is some proficiency with the Unix shell so that you can run the various &lt;code&gt;hugo&lt;/code&gt; commands and navigate the directory structure it generates for you.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s also helpful for when things go wrong and you need to debug.  For example, this &lt;strong&gt;&lt;a href=&#34;http://themes.gohugo.io/future-imperfect/&#34;&gt;theme&lt;/a&gt;&lt;/strong&gt; that I&amp;rsquo;m using was slightly buggy out of the box, and I had to move some files around to make it work.&lt;/p&gt;
+
+&lt;h3 id=&#34;did-you-try-other-static-site-generators&#34;&gt;Did you try other static site generators?&lt;/h3&gt;
+
+&lt;p&gt;I did go over to &lt;a href=&#34;https://www.staticgen.com/&#34;&gt;https://www.staticgen.com/&lt;/a&gt; and look over the list.  I remembered that Hugo was one of the ones you liked, so I gave that a try first, and I liked it.  Thus, the search ended rather quickly.&lt;/p&gt;
+
+&lt;h3 id=&#34;your-thoughts-on-storing-comments-on-your-own&#34;&gt;Your thoughts on storing comments on your own&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(it&amp;rsquo;d probably require a dynamic site, though I saw some weird IMAP tricks with Pelican a while ago) vs using something like Disqus.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;On blogs where the topic matter makes censorship unlikely, I don&amp;rsquo;t mind delegating comments to a system like Disqus.  If I were running a blog with political commentary, I would definitely want to handle comments locally, though.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I was actually surprised when I saw the Disqus comment widget when I published it to GitHub, because they didn&amp;rsquo;t show up at all while I was developing the site locally.  It&amp;rsquo;s using someone else&amp;rsquo;s generic Disqus forum and not one that I set up myself.&lt;/p&gt;
+
+&lt;p&gt;I should probably fix that.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
