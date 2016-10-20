@@ -52,7 +52,9 @@
 
 &lt;p&gt;To be honest, I was actually surprised when I saw the Disqus comment widget when I published it to GitHub, because they didn&amp;rsquo;t show up at all while I was developing the site locally.  It&amp;rsquo;s using someone else&amp;rsquo;s generic Disqus forum and not one that I set up myself.&lt;/p&gt;
 
-&lt;p&gt;I should probably fix that.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;I should probably fix that.&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;I fixed it &amp;ndash; I have my own disqus forum now.&lt;/p&gt;
 </description>
     </item>
     
