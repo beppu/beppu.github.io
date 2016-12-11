@@ -6,8 +6,603 @@
     <description>Recent content in Post-rsses on Beppu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Oct 2016 09:20:15 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 10 Dec 2016 18:47:59 -0800</lastBuildDate>
     <atom:link href="http://beppu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Spec-ulation</title>
+      <link>http://beppu.github.io/post/spec-ulation/</link>
+      <pubDate>Sat, 10 Dec 2016 18:47:59 -0800</pubDate>
+      
+      <guid>http://beppu.github.io/post/spec-ulation/</guid>
+      <description>
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/oyLBGkS5ICk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oyLBGkS5ICk&#34;&gt;https://www.youtube.com/watch?v=oyLBGkS5ICk&lt;/a&gt;&lt;/p&gt;
+
+&lt;style&gt;
+#content h1 {
+  margin-top: 1em;
+  border-top: 1px solid #888;
+}
+
+#content h2 {
+  font-size: 13px;
+}
+&lt;/style&gt;
+
+&lt;h1 id=&#34;tl-dw&#34;&gt;tl;dw&lt;/h1&gt;
+
+&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;
+
+&lt;h1 id=&#34;0-00-spec-ulation-a-id-sec-1-2-name-sec-1-2-a&#34;&gt;0:00 Spec-ulation&lt;a id=&#34;sec-1-2&#34; name=&#34;sec-1-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Rich Hickey&lt;/p&gt;
+
+&lt;h1 id=&#34;0-58-this-is-not-a-talk-about-spec-a-id-sec-1-3-name-sec-1-3-a&#34;&gt;0:58 This is not a talk about spec&lt;a id=&#34;sec-1-3&#34; name=&#34;sec-1-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;it-s-a-talk-about-what-spec-is-about-a-id-sec-1-3-1-name-sec-1-3-1-a&#34;&gt;It&amp;rsquo;s a talk about what spec is about&lt;a id=&#34;sec-1-3-1&#34; name=&#34;sec-1-3-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Giving something to someone that they can use&lt;/li&gt;
+&lt;li&gt;Making a commitment
+
+&lt;ol&gt;
+&lt;li&gt;i.e. not taking it away later&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;2-46-change-a-id-sec-1-4-name-sec-1-4-a&#34;&gt;2:46 Change&lt;a id=&#34;sec-1-4&#34; name=&#34;sec-1-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;is it a thing?&lt;/p&gt;
+
+&lt;h1 id=&#34;3-35-change-a-id-sec-1-5-name-sec-1-5-a&#34;&gt;3:35 &amp;lsquo;Change&amp;rsquo;&lt;a id=&#34;sec-1-5&#34; name=&#34;sec-1-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;origin-a-id-sec-1-5-1-name-sec-1-5-1-a&#34;&gt;Origin:&lt;a id=&#34;sec-1-5-1&#34; name=&#34;sec-1-5-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;from Latin cambire &amp;ldquo;to exchange, barter&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;you-could-change-a-cow-into-wheat-a-id-sec-1-5-2-name-sec-1-5-2-a&#34;&gt;You could change a cow into wheat!&lt;a id=&#34;sec-1-5-2&#34; name=&#34;sec-1-5-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;c.f. Eurogames&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;one-sided-change-is-x2026-theft-a-id-sec-1-5-3-name-sec-1-5-3-a&#34;&gt;One-sided change is&amp;#x2026; theft?&lt;a id=&#34;sec-1-5-3&#34; name=&#34;sec-1-5-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Anti-social at least&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;productivity-and-soul-crushing-at-worst-a-id-sec-1-5-4-name-sec-1-5-4-a&#34;&gt;Productivity and soul-crushing at worst?&lt;a id=&#34;sec-1-5-4&#34; name=&#34;sec-1-5-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;5-13-a-id-sec-1-6-name-sec-1-6-a&#34;&gt;5:13&lt;a id=&#34;sec-1-6&#34; name=&#34;sec-1-6&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;We want our software (esp.
+libraries/services to be
+different/better tomorrow.&lt;/p&gt;
+
+&lt;p&gt;What will that mean for our consumers?&lt;/p&gt;
+
+&lt;h1 id=&#34;5-42-dependencies-a-id-sec-1-7-name-sec-1-7-a&#34;&gt;5:42 Dependencies&lt;a id=&#34;sec-1-7&#34; name=&#34;sec-1-7&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;[image of versioned library dependency tree]&lt;/p&gt;
+
+&lt;h1 id=&#34;6-59-but-x2026-a-id-sec-1-8-name-sec-1-8-a&#34;&gt;6:59 But&amp;#x2026;&lt;a id=&#34;sec-1-8&#34; name=&#34;sec-1-8&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;artifacts-don-t-actually-use-other-artifacts-a-id-sec-1-8-1-name-sec-1-8-1-a&#34;&gt;Artifacts don&amp;rsquo;t actually use other artifacts&lt;a id=&#34;sec-1-8-1&#34; name=&#34;sec-1-8-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;there-is-nothing-in-the-code-about-artifacts-a-id-sec-1-8-2-name-sec-1-8-2-a&#34;&gt;There is nothing in the code about artifacts&lt;a id=&#34;sec-1-8-2&#34; name=&#34;sec-1-8-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;7-45-dependencies-redux-a-id-sec-1-9-name-sec-1-9-a&#34;&gt;7:45 Dependencies Redux&lt;a id=&#34;sec-1-9&#34; name=&#34;sec-1-9&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;[image of versioned library dependency tree broken down by namespace]
+[exposes opportunity for dead code elimination; don&amp;rsquo;t need library z]&lt;/p&gt;
+
+&lt;h1 id=&#34;9-46-but-x2026-a-id-sec-1-10-name-sec-1-10-a&#34;&gt;9:46 But&amp;#x2026;&lt;a id=&#34;sec-1-10&#34; name=&#34;sec-1-10&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;namespaces-packages-don-t-actually-use-other-namespaces-packages-a-id-sec-1-10-1-name-sec-1-10-1-a&#34;&gt;Namespaces/packages don&amp;rsquo;t actually use other namespaces/packages&lt;a id=&#34;sec-1-10-1&#34; name=&#34;sec-1-10-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;at-least-require-import-appear-in-the-code-a-id-sec-1-10-2-name-sec-1-10-2-a&#34;&gt;At least require/import appear in the code&lt;a id=&#34;sec-1-10-2&#34; name=&#34;sec-1-10-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;where-is-the-mapping-to-artifacts-no-mapping-of-artifact-to-namespaces-a-id-sec-1-10-3-name-sec-1-10-3-a&#34;&gt;Where is the mapping to artifacts? [no mapping of artifact to namespaces]&lt;a id=&#34;sec-1-10-3&#34; name=&#34;sec-1-10-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;10-48-dependency-truth-code-a-id-sec-1-11-name-sec-1-11-a&#34;&gt;10:48 Dependency Truth (code)&lt;a id=&#34;sec-1-11&#34; name=&#34;sec-1-11&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;[image of namespaces further broken down by function dependencies]
+[shows hat lib X is not a true dependency]&lt;/p&gt;
+
+&lt;h1 id=&#34;13-45-do-deps-force-versioning-a-id-sec-1-12-name-sec-1-12-a&#34;&gt;13:45 Do deps Force Versioning?&lt;a id=&#34;sec-1-12&#34; name=&#34;sec-1-12&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&amp;ldquo;What you can do is let Semantic Versioning provide you
+with a sane way to release and upgrade packages without
+having to roll new versions of dependent packages&amp;rdquo;
+&lt;a href=&#34;http://semver.org/spec/v2.0.0.html&#34;&gt;http://semver.org/spec/v2.0.0.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;is-that-what-happens-a-id-sec-1-12-1-name-sec-1-12-1-a&#34;&gt;Is that what happens?&lt;a id=&#34;sec-1-12-1&#34; name=&#34;sec-1-12-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;often-no-cascading-version-bumps-a-id-sec-1-12-2-name-sec-1-12-2-a&#34;&gt;Often, no, cascading version bumps&lt;a id=&#34;sec-1-12-2&#34; name=&#34;sec-1-12-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;to let root &amp;lsquo;know&amp;rsquo; about improvements to leaves, even if path nodes&amp;rsquo; code unchanged&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;level violation&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;15-27-names-levels-scopes-contexts-a-id-sec-1-13-name-sec-1-13-a&#34;&gt;15:27 Names, Levels, Scopes, Contexts&lt;a id=&#34;sec-1-13&#34; name=&#34;sec-1-13&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;fns-depend-on-call-fns-by-name-a-id-sec-1-13-1-name-sec-1-13-1-a&#34;&gt;fns depend on (call) fns by name&lt;a id=&#34;sec-1-13-1&#34; name=&#34;sec-1-13-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;ns-packages-requires-includes-set-up-a-context-in-which-those-calls-can-succeed-a-id-sec-1-13-2-name-sec-1-13-2-a&#34;&gt;ns/packages requires/includes set up a context in which those calls can succeed&lt;a id=&#34;sec-1-13-2&#34; name=&#34;sec-1-13-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;artifact-deps-poms-set-up-a-context-in-which-those-requires-can-succeed-a-id-sec-1-13-3-name-sec-1-13-3-a&#34;&gt;Artifact deps/poms set up a context in which those requires can succeed&lt;a id=&#34;sec-1-13-3&#34; name=&#34;sec-1-13-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;fn-name-scopes-include-ns-but-not-artifact-a-id-sec-1-13-4-name-sec-1-13-4-a&#34;&gt;fn name scopes include ns but not artifact&lt;a id=&#34;sec-1-13-4&#34; name=&#34;sec-1-13-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;artifact context is MAGIC&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;17-19-basis-a-id-sec-1-14-name-sec-1-14-a&#34;&gt;17:19 Basis&lt;a id=&#34;sec-1-14&#34; name=&#34;sec-1-14&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;why-do-we-put-things-in-our-deps-a-id-sec-1-14-1-name-sec-1-14-1-a&#34;&gt;Why do we put things in our deps?&lt;a id=&#34;sec-1-14-1&#34; name=&#34;sec-1-14-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;We need access to libs while developing&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Maven chases transitive deps&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Incorporated in artifact to communicate needs to our consumers&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;ldquo;we tested against x,y,z&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;but-course-grained-implies-too-much-a-id-sec-1-14-2-name-sec-1-14-2-a&#34;&gt;But, course-grained, implies too much&lt;a id=&#34;sec-1-14-2&#34; name=&#34;sec-1-14-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;doesn&amp;rsquo;t capture actual deps, just context&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;19-49-ex-changes-in-software-important-declarations-a-id-sec-1-15-name-sec-1-15-a&#34;&gt;19:49 (Ex)changes in Software     :important:declarations:&lt;a id=&#34;sec-1-15&#34; name=&#34;sec-1-15&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;what-is-required-a-id-sec-1-15-1-name-sec-1-15-1-a&#34;&gt;What is required?&lt;a id=&#34;sec-1-15-1&#34; name=&#34;sec-1-15-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;fn - args&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ns - var names&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;artifact  ns/package names/paths&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;what-is-provided-a-id-sec-1-15-2-name-sec-1-15-2-a&#34;&gt;What is provided?&lt;a id=&#34;sec-1-15-2&#34; name=&#34;sec-1-15-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;fn - ret (proc/service effect)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ns - vars/fns&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;artifact - namespaces/packages&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;22-11-growing-your-software-a-id-sec-1-16-name-sec-1-16-a&#34;&gt;22:11 Growing Your Software&lt;a id=&#34;sec-1-16&#34; name=&#34;sec-1-16&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;accretion-a-id-sec-1-16-1-name-sec-1-16-1-a&#34;&gt;Accretion&lt;a id=&#34;sec-1-16-1&#34; name=&#34;sec-1-16-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;provide more&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;relaxation-a-id-sec-1-16-2-name-sec-1-16-2-a&#34;&gt;Relaxation&lt;a id=&#34;sec-1-16-2&#34; name=&#34;sec-1-16-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;require less&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;fixation-a-id-sec-1-16-3-name-sec-1-16-3-a&#34;&gt;Fixation&lt;a id=&#34;sec-1-16-3&#34; name=&#34;sec-1-16-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;bash bugs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;24-14-breaking-your-software-a-id-sec-1-17-name-sec-1-17-a&#34;&gt;24:14 Breaking Your Software&lt;a id=&#34;sec-1-17&#34; name=&#34;sec-1-17&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;require-more-a-id-sec-1-17-1-name-sec-1-17-1-a&#34;&gt;Require more&lt;a id=&#34;sec-1-17-1&#34; name=&#34;sec-1-17-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;provide-less-a-id-sec-1-17-2-name-sec-1-17-2-a&#34;&gt;Provide less&lt;a id=&#34;sec-1-17-2&#34; name=&#34;sec-1-17-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;unrelated-stuff-under-same-name-a-id-sec-1-17-3-name-sec-1-17-3-a&#34;&gt;Unrelated stuff under same name&lt;a id=&#34;sec-1-17-3&#34; name=&#34;sec-1-17-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;25-55-change-is-not-a-thing-a-id-sec-1-18-name-sec-1-18-a&#34;&gt;25:55 Change is Not a Thing&lt;a id=&#34;sec-1-18&#34; name=&#34;sec-1-18&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;it-s-one-of-two-things-a-id-sec-1-18-1-name-sec-1-18-1-a&#34;&gt;It&amp;rsquo;s one of two things&lt;a id=&#34;sec-1-18-1&#34; name=&#34;sec-1-18-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Growth&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Breakage&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;in-the-small-fns-spec-can-help-us-determine-which-prevent-breaking-specs-a-id-sec-1-18-2-name-sec-1-18-2-a&#34;&gt;In the small (fns), spec can help us determine which, prevent breaking specs&lt;a id=&#34;sec-1-18-2&#34; name=&#34;sec-1-18-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;as-long-as-we-don-t-try-to-do-something-silly-like-versioning-specs-a-id-sec-1-18-3-name-sec-1-18-3-a&#34;&gt;As long as we don&amp;rsquo;t try to do something silly like versioning specs!&lt;a id=&#34;sec-1-18-3&#34; name=&#34;sec-1-18-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;27-56-recognizing-collections-a-id-sec-1-19-name-sec-1-19-a&#34;&gt;27:56 Recognizing Collections&lt;a id=&#34;sec-1-19&#34; name=&#34;sec-1-19&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;you-only-change-a-collection-by-adding-removing-members-a-id-sec-1-19-1-name-sec-1-19-1-a&#34;&gt;You only &amp;lsquo;change&amp;rsquo; a collection by adding/removing members&lt;a id=&#34;sec-1-19-1&#34; name=&#34;sec-1-19-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;adding-growth-removing-breakage-a-id-sec-1-19-2-name-sec-1-19-2-a&#34;&gt;Adding = growth, removing = breakage&lt;a id=&#34;sec-1-19-2&#34; name=&#34;sec-1-19-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;namespaces-collections-of-vars-fns-a-id-sec-1-19-3-name-sec-1-19-3-a&#34;&gt;Namespaces - collections of vars/fns&lt;a id=&#34;sec-1-19-3&#34; name=&#34;sec-1-19-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;artifacts-collections-of-namespaces-packages-a-id-sec-1-19-4-name-sec-1-19-4-a&#34;&gt;Artifacts - collections of namespaces/packages&lt;a id=&#34;sec-1-19-4&#34; name=&#34;sec-1-19-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;don-t-conflate-levels-a-id-sec-1-19-5-name-sec-1-19-5-a&#34;&gt;Don&amp;rsquo;t conflate levels!&lt;a id=&#34;sec-1-19-5&#34; name=&#34;sec-1-19-5&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;My family doesn&amp;rsquo;t change when I put on a hat&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;everything-intersting-happens-at-the-leaves-a-id-sec-1-19-6-name-sec-1-19-6-a&#34;&gt;(Everything intersting happens at the leaves.)&lt;a id=&#34;sec-1-19-6&#34; name=&#34;sec-1-19-6&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;29-52-semantic-versioning-semantics-a-id-sec-1-20-name-sec-1-20-a&#34;&gt;29:52 &amp;ldquo;Semantic&amp;rdquo; Versioning &amp;ldquo;Semantics&amp;rdquo;&lt;a id=&#34;sec-1-20&#34; name=&#34;sec-1-20&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-2-changed-a-id-sec-1-20-1-name-sec-1-20-1-a&#34;&gt;1.2.changed&lt;a id=&#34;sec-1-20-1&#34; name=&#34;sec-1-20-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;you don&amp;rsquo;t care&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;1-changed-0-a-id-sec-1-20-2-name-sec-1-20-2-a&#34;&gt;1.changed.0&lt;a id=&#34;sec-1-20-2&#34; name=&#34;sec-1-20-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;you don&amp;rsquo;t care&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;changed-0-0-a-id-sec-1-20-3-name-sec-1-20-3-a&#34;&gt;changed.0.0&lt;a id=&#34;sec-1-20-3&#34; name=&#34;sec-1-20-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;you&amp;rsquo;re screwed&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;31-18-even-worse-x2026-a-id-sec-1-21-name-sec-1-21-a&#34;&gt;31:18 Even worse&amp;#x2026;&lt;a id=&#34;sec-1-21&#34; name=&#34;sec-1-21&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;you-might-be-screwed-a-id-sec-1-21-1-name-sec-1-21-1-a&#34;&gt;&amp;ldquo;you might be screwed&amp;rdquo;&lt;a id=&#34;sec-1-21-1&#34; name=&#34;sec-1-21-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;considered-covering-of-change-at-all-levels-a-id-sec-1-21-2-name-sec-1-21-2-a&#34;&gt;Considered covering of change at all levels&lt;a id=&#34;sec-1-21-2&#34; name=&#34;sec-1-21-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Good luck determining where&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;might-just-as-well-change-the-name-a-id-sec-1-21-3-name-sec-1-21-3-a&#34;&gt;Might just as well change the name&lt;a id=&#34;sec-1-21-3&#34; name=&#34;sec-1-21-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;32-26-might-as-well-change-the-name-a-id-sec-1-22-name-sec-1-22-a&#34;&gt;32:26 Might as well change the name&lt;a id=&#34;sec-1-22&#34; name=&#34;sec-1-22&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;32-28-might-as-well-change-the-name-a-id-sec-1-23-name-sec-1-23-a&#34;&gt;32:28 MIGHT AS WELL CHANGE THE NAME&lt;a id=&#34;sec-1-23&#34; name=&#34;sec-1-23&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;32-52-but-x2026-a-id-sec-1-24-name-sec-1-24-a&#34;&gt;32:52 But&amp;#x2026;&lt;a id=&#34;sec-1-24&#34; name=&#34;sec-1-24&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;that&amp;rsquo;s not change,
+That&amp;rsquo;s a new thing!
+Right.&lt;/p&gt;
+
+&lt;h1 id=&#34;33-09-which-name-a-id-sec-1-25-name-sec-1-25-a&#34;&gt;33:09 Which name?&lt;a id=&#34;sec-1-25&#34; name=&#34;sec-1-25&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Levels again&lt;/p&gt;
+
+&lt;h1 id=&#34;33-39-requiring-more-args-providing-less-on-return-a-id-sec-1-26-name-sec-1-26-a&#34;&gt;33:39 Requiring More args?  Providing Less on return?&lt;a id=&#34;sec-1-26&#34; name=&#34;sec-1-26&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;i-e-incompatible-spec-a-id-sec-1-26-1-name-sec-1-26-1-a&#34;&gt;i.e. incompatible spec&lt;a id=&#34;sec-1-26-1&#34; name=&#34;sec-1-26-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;new-function-a-id-sec-1-26-2-name-sec-1-26-2-a&#34;&gt;new function&lt;a id=&#34;sec-1-26-2&#34; name=&#34;sec-1-26-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;old-ns/foo-2 or new-ns/foo&lt;/p&gt;
+
+&lt;h2 id=&#34;n-b-the-namespace-is-port-of-the-name-a-id-sec-1-26-3-name-sec-1-26-3-a&#34;&gt;N.B - the namespace is port of the name&lt;a id=&#34;sec-1-26-3&#34; name=&#34;sec-1-26-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ns aliases can ease transition&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;36-14-providing-fewer-fns-vars-a-id-sec-1-27-name-sec-1-27-a&#34;&gt;36:14 Providing Fewer fns/vars?&lt;a id=&#34;sec-1-27&#34; name=&#34;sec-1-27&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;new-namespace-package-a-id-sec-1-27-1-name-sec-1-27-1-a&#34;&gt;New namespace/package&lt;a id=&#34;sec-1-27-1&#34; name=&#34;sec-1-27-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;37-20-providing-fewer-namespaces-packages-a-id-sec-1-28-name-sec-1-28-a&#34;&gt;37:20 Providing Fewer namespaces/packages?&lt;a id=&#34;sec-1-28&#34; name=&#34;sec-1-28&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;new-artifactid-a-id-sec-1-28-1-name-sec-1-28-1-a&#34;&gt;New artifactId?&lt;a id=&#34;sec-1-28-1&#34; name=&#34;sec-1-28-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;but-x2026-that-s-what-major-segment-is-for-a-id-sec-1-28-2-name-sec-1-28-2-a&#34;&gt;but&amp;#x2026; that&amp;rsquo;s what MAJOR segment is for?&lt;a id=&#34;sec-1-28-2&#34; name=&#34;sec-1-28-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;no, &amp;ldquo;any backwards incompatible changes&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;i.e. too-broad &amp;ldquo;semantic&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The problem is artifact-&amp;gt;namespaces magic means possibility of collision&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;No &amp;lsquo;scope&amp;rsquo; implicitly renaming children&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;rich-was-not-sure-what-the-right-strategy-for-this-situaion-is-a-id-sec-1-28-3-name-sec-1-28-3-a&#34;&gt;[Rich was not sure what the right strategy for this situaion is.]&lt;a id=&#34;sec-1-28-3&#34; name=&#34;sec-1-28-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;40-33-doesn-t-doing-the-right-thing-name-wise-make-you-reluctant-to-remove-things-a-id-sec-1-29-name-sec-1-29-a&#34;&gt;40:33 Doesn&amp;rsquo;t Doing the Right Thing Name-wise Make You Reluctant to Remove Things?&lt;a id=&#34;sec-1-29&#34; name=&#34;sec-1-29&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Yes. Good.&lt;/p&gt;
+
+&lt;h1 id=&#34;41-02-breaking-changes-are-broken-a-id-sec-1-30-name-sec-1-30-a&#34;&gt;41:02 Breaking Changes are Broken&lt;a id=&#34;sec-1-30&#34; name=&#34;sec-1-30&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;full-stop-a-id-sec-1-30-1-name-sec-1-30-1-a&#34;&gt;Full Stop&lt;a id=&#34;sec-1-30-1&#34; name=&#34;sec-1-30-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;don-t-do-it-a-id-sec-1-30-2-name-sec-1-30-2-a&#34;&gt;Don&amp;rsquo;t do it&lt;a id=&#34;sec-1-30-2&#34; name=&#34;sec-1-30-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;don-t-try-to-figure-out-the-best-way-to-do-it-a-id-sec-1-30-3-name-sec-1-30-3-a&#34;&gt;Don&amp;rsquo;t try to figure out the best way to do it&lt;a id=&#34;sec-1-30-3&#34; name=&#34;sec-1-30-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;avoid-breakage-by-turning-it-into-accretion-a-id-sec-1-30-4-name-sec-1-30-4-a&#34;&gt;Avoid breakage by turning it into accretion&lt;a id=&#34;sec-1-30-4&#34; name=&#34;sec-1-30-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;old and new can co-exist&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;42-25-so-maven-is-broken-a-id-sec-1-31-name-sec-1-31-a&#34;&gt;42:25 So Maven is Broken?&lt;a id=&#34;sec-1-31&#34; name=&#34;sec-1-31&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;not-really-how-we-use-it-may-be-broken-a-id-sec-1-31-1-name-sec-1-31-1-a&#34;&gt;Not really - how we use it may be broken&lt;a id=&#34;sec-1-31-1&#34; name=&#34;sec-1-31-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;maven-central-doesn-t-let-you-change-artifacts-a-id-sec-1-31-2-name-sec-1-31-2-a&#34;&gt;Maven central doesn&amp;rsquo;t let you &amp;lsquo;change&amp;rsquo; artifacts&lt;a id=&#34;sec-1-31-2&#34; name=&#34;sec-1-31-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;and never &amp;lsquo;breaks&amp;rsquo;, is not versioned!!&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;no &amp;ldquo;I&amp;rsquo;m using maven central 1234567.0.0&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;you-re-always-hapy-to-use-latest-maven-central-a-id-sec-1-31-3-name-sec-1-31-3-a&#34;&gt;You&amp;rsquo;re always hapy to use latest maven central&lt;a id=&#34;sec-1-31-3&#34; name=&#34;sec-1-31-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Why?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;it&amp;rsquo;s an accreting collection of immutable things&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;44-27-insert-rotten-sandwich-image-here-a-id-sec-1-32-name-sec-1-32-a&#34;&gt;44:27 (insert rotten sandwich image here)&lt;a id=&#34;sec-1-32&#34; name=&#34;sec-1-32&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;46-29-so-semver-is-broken-a-id-sec-1-33-name-sec-1-33-a&#34;&gt;46:29 So SemVer is Broken?&lt;a id=&#34;sec-1-33&#34; name=&#34;sec-1-33&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;yes-a-id-sec-1-33-1-name-sec-1-33-1-a&#34;&gt;Yes&lt;a id=&#34;sec-1-33-1&#34; name=&#34;sec-1-33-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;It is, in part, about how to ship breakage&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;and the other &amp;lsquo;semantics&amp;rsquo; are of little utility&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;what-instead-a-id-sec-1-33-2-name-sec-1-33-2-a&#34;&gt;What instead?&lt;a id=&#34;sec-1-33-2&#34; name=&#34;sec-1-33-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Maybe chronological versioning?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;YYYYMMDD.HHMMSS&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Conveys more and supports some forms of relativism&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;48-47-what-about-git-a-id-sec-1-34-name-sec-1-34-a&#34;&gt;48:47 What about Git?&lt;a id=&#34;sec-1-34&#34; name=&#34;sec-1-34&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;wonderful-immutable-truth-of-the-code-system-widely-adopted-a-id-sec-1-34-1-name-sec-1-34-1-a&#34;&gt;Wonderful, immutable, truth-of-the-code system, widely adopted&lt;a id=&#34;sec-1-34-1&#34; name=&#34;sec-1-34-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;content-based-addressing-a-id-sec-1-34-2-name-sec-1-34-2-a&#34;&gt;Content-based addressing&lt;a id=&#34;sec-1-34-2&#34; name=&#34;sec-1-34-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;almost-completely-ignored-by-artifacts-versioning-even-though-code-basis-a-id-sec-1-34-3-name-sec-1-34-3-a&#34;&gt;Almost completely ignored by artifacts/versioning, even though code basis&lt;a id=&#34;sec-1-34-3&#34; name=&#34;sec-1-34-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;deserves-a-role-a-id-sec-1-34-4-name-sec-1-34-4-a&#34;&gt;Deserves a role&lt;a id=&#34;sec-1-34-4&#34; name=&#34;sec-1-34-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;but, SHAs vs order/causality/readability&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;50-37-it-s-a-social-thing-a-id-sec-1-35-name-sec-1-35-a&#34;&gt;50:37 It&amp;rsquo;s a Social Thing&lt;a id=&#34;sec-1-35&#34; name=&#34;sec-1-35&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;we-won-t-be-albe-to-tech-ourselves-out-of-this-a-id-sec-1-35-1-name-sec-1-35-1-a&#34;&gt;We won&amp;rsquo;t be albe to tech ourselves out of this&lt;a id=&#34;sec-1-35-1&#34; name=&#34;sec-1-35-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;we-need-to-agree-that-treating-each-other-well-is-important-a-id-sec-1-35-2-name-sec-1-35-2-a&#34;&gt;We need to agree that treating each other well is important&lt;a id=&#34;sec-1-35-2&#34; name=&#34;sec-1-35-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;51-18-local-dev-vs-open-dev-a-id-sec-1-36-name-sec-1-36-a&#34;&gt;51:18 Local dev vs Open dev&lt;a id=&#34;sec-1-36&#34; name=&#34;sec-1-36&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;incompatible-churn-acceptable-in-private-a-id-sec-1-36-1-name-sec-1-36-1-a&#34;&gt;Incompatible churn acceptable in private&lt;a id=&#34;sec-1-36-1&#34; name=&#34;sec-1-36-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;slack-is-not-standup-a-id-sec-1-36-2-name-sec-1-36-2-a&#34;&gt;Slack is not standup&lt;a id=&#34;sec-1-36-2&#34; name=&#34;sec-1-36-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;os-user-base-is-open-and-unknown-a-id-sec-1-36-3-name-sec-1-36-3-a&#34;&gt;OS user base is open and unknown&lt;a id=&#34;sec-1-36-3&#34; name=&#34;sec-1-36-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;54-18-coding-for-growth-a-id-sec-1-37-name-sec-1-37-a&#34;&gt;54:18 Coding for Growth&lt;a id=&#34;sec-1-37&#34; name=&#34;sec-1-37&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;open-specs-and-data-formats-are-key-a-id-sec-1-37-1-name-sec-1-37-1-a&#34;&gt;Open specs and data formats are key&lt;a id=&#34;sec-1-37-1&#34; name=&#34;sec-1-37-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;specs-are-about-what-you-can-do-not-about-what-you-can-t-a-id-sec-1-37-2-name-sec-1-37-2-a&#34;&gt;Specs are about what you can do, not about what you can&amp;rsquo;t&lt;a id=&#34;sec-1-37-2&#34; name=&#34;sec-1-37-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;prohibition-turns-growth-into-breakage-cascades-a-id-sec-1-37-3-name-sec-1-37-3-a&#34;&gt;Prohibition turns growth into breakage, cascades&lt;a id=&#34;sec-1-37-3&#34; name=&#34;sec-1-37-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;always-presume-you-might-be-handed-more-than-what-you-need-or-know-about-a-id-sec-1-37-4-name-sec-1-37-4-a&#34;&gt;Always presume you might be handed more than what you need or know about&lt;a id=&#34;sec-1-37-4&#34; name=&#34;sec-1-37-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ignore, or have policy for it&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;58-31-what-about-iterative-development-a-id-sec-1-38-name-sec-1-38-a&#34;&gt;58:31 What about Iterative Development?&lt;a id=&#34;sec-1-38&#34; name=&#34;sec-1-38&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;alphas-are-ok-a-id-sec-1-38-1-name-sec-1-38-1-a&#34;&gt;Alphas are OK&lt;a id=&#34;sec-1-38-1&#34; name=&#34;sec-1-38-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;but-maybe-should-be-in-artifactid-a-id-sec-1-38-2-name-sec-1-38-2-a&#34;&gt;But maybe should be in artifactId&lt;a id=&#34;sec-1-38-2&#34; name=&#34;sec-1-38-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;or-incremental-api-publishing-a-id-sec-1-38-3-name-sec-1-38-3-a&#34;&gt;Or - incremental API &amp;lsquo;publishing&amp;rsquo;&lt;a id=&#34;sec-1-38-3&#34; name=&#34;sec-1-38-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;open-source-is-not-an-excuse-for-indefinite-public-thrashing-around-a-id-sec-1-38-4-name-sec-1-38-4-a&#34;&gt;Open source is not an excuse for indefinite public thrashing around&lt;a id=&#34;sec-1-38-4&#34; name=&#34;sec-1-38-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-00-14-the-only-truth-is-runtime-a-id-sec-1-39-name-sec-1-39-a&#34;&gt;1:00:14 The Only Truth is Runtime&lt;a id=&#34;sec-1-39&#34; name=&#34;sec-1-39&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;deps-poms-are-just-suggestions-a-id-sec-1-39-1-name-sec-1-39-1-a&#34;&gt;Deps/POMs are just suggestions&lt;a id=&#34;sec-1-39-1&#34; name=&#34;sec-1-39-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;can be full of &amp;lsquo;conflicts&amp;rsquo;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;someone-needs-to-build-a-classpath-a-id-sec-1-39-2-name-sec-1-39-2-a&#34;&gt;Someone needs to build a classpath&lt;a id=&#34;sec-1-39-2&#34; name=&#34;sec-1-39-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;that alone determines runtime context&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;possibly-a-lib-set-that-none-of-the-components-have-ever-run-against-a-id-sec-1-39-3-name-sec-1-39-3-a&#34;&gt;Possibly a lib set that none of the components have ever run against&lt;a id=&#34;sec-1-39-3&#34; name=&#34;sec-1-39-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-01-59-testing-is-runtime-dependent-a-id-sec-1-40-name-sec-1-40-a&#34;&gt;1:01:59 Testing is Runtime Dependent&lt;a id=&#34;sec-1-40&#34; name=&#34;sec-1-40&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;and-runtimes-are-independent-if-related-of-dev-and-build-time-deps-a-id-sec-1-40-1-name-sec-1-40-1-a&#34;&gt;And runtimes are independent (if related) of dev- and build-time deps&lt;a id=&#34;sec-1-40-1&#34; name=&#34;sec-1-40-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;plus-you-can-t-test-against-an-open-set-of-consumers-a-id-sec-1-40-2-name-sec-1-40-2-a&#34;&gt;Plus, you can&amp;rsquo;t test against an open set of consumers&lt;a id=&#34;sec-1-40-2&#34; name=&#34;sec-1-40-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;artifact-release-testing-is-inherently-limited-a-id-sec-1-40-3-name-sec-1-40-3-a&#34;&gt;Artifact release testing is inherently limited&lt;a id=&#34;sec-1-40-3&#34; name=&#34;sec-1-40-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;we-could-be-reifying-artifact-sets-at-a-macro-e-g-app-or-multi-app-level-a-id-sec-1-40-4-name-sec-1-40-4-a&#34;&gt;We could be reifying artifact sets at a macro (e.g. app or multi-app) level&lt;a id=&#34;sec-1-40-4&#34; name=&#34;sec-1-40-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-03-47-live-coding-demo-a-id-sec-1-41-name-sec-1-41-a&#34;&gt;1:03:47 (Live Coding Demo)&lt;a id=&#34;sec-1-41&#34; name=&#34;sec-1-41&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;1-04-00-what-about-web-services-a-id-sec-1-42-name-sec-1-42-a&#34;&gt;1:04:00 What about Web Services?&lt;a id=&#34;sec-1-42&#34; name=&#34;sec-1-42&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;same-problems-same-mistakes-a-id-sec-1-42-1-name-sec-1-42-1-a&#34;&gt;Same problems, same mistakes&lt;a id=&#34;sec-1-42-1&#34; name=&#34;sec-1-42-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&amp;lsquo;versioning&amp;rsquo; non-answer&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;conflating collections w/contents&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;web-service-is-collection-of-ops-a-id-sec-1-42-2-name-sec-1-42-2-a&#34;&gt;Web service is collection of ops&lt;a id=&#34;sec-1-42-2&#34; name=&#34;sec-1-42-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;ops-require-provide-a-id-sec-1-42-3-name-sec-1-42-3-a&#34;&gt;ops require/provide&lt;a id=&#34;sec-1-42-3&#34; name=&#34;sec-1-42-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;accretion-could-prevent-a-lot-of-client-service-version-hell-a-id-sec-1-42-4-name-sec-1-42-4-a&#34;&gt;Accretion could prevent a lot of client/service version hell&lt;a id=&#34;sec-1-42-4&#34; name=&#34;sec-1-42-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-07-04-we-need-to-bring-fp-to-the-library-ecosystem-a-id-sec-1-43-name-sec-1-43-a&#34;&gt;1:07:04 We Need to Bring FP to the Library Ecosystem&lt;a id=&#34;sec-1-43&#34; name=&#34;sec-1-43&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;currently-update-in-place-excused-but-not-corrected-by-versioning-a-id-sec-1-43-1-name-sec-1-43-1-a&#34;&gt;Currently update-in-place, excused but not corrected by versioning&lt;a id=&#34;sec-1-43-1&#34; name=&#34;sec-1-43-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;dependency hell == mutability hell&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;makes-programming-fragile-a-id-sec-1-43-2-name-sec-1-43-2-a&#34;&gt;Makes programming fragile&lt;a id=&#34;sec-1-43-2&#34; name=&#34;sec-1-43-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;libraries-less-useful-a-id-sec-1-43-3-name-sec-1-43-3-a&#34;&gt;Libraries less useful&lt;a id=&#34;sec-1-43-3&#34; name=&#34;sec-1-43-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Even undesirable, whatever their features&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;1-08-19-this-is-impossible-impractical-a-id-sec-1-44-name-sec-1-44-a&#34;&gt;1:08:19 &amp;ldquo;This is Impossible/Impractical&amp;rdquo;&lt;a id=&#34;sec-1-44&#34; name=&#34;sec-1-44&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;nope-a-id-sec-1-44-1-name-sec-1-44-1-a&#34;&gt;Nope&lt;a id=&#34;sec-1-44-1&#34; name=&#34;sec-1-44-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;many-examples-of-decade-compatibility-a-id-sec-1-44-2-name-sec-1-44-2-a&#34;&gt;Many examples of decade+ compatibility&lt;a id=&#34;sec-1-44-2&#34; name=&#34;sec-1-44-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Unix APIs&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Java&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTML&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Clojure?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;compatibility-a-prerequisite-of-success-a-id-sec-1-44-3-name-sec-1-44-3-a&#34;&gt;Compatibility a prerequisite of success?&lt;a id=&#34;sec-1-44-3&#34; name=&#34;sec-1-44-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-09-47-what-if-we-never-broke-anything-a-id-sec-1-45-name-sec-1-45-a&#34;&gt;1:09:47 What If We Never Broke Anything?&lt;a id=&#34;sec-1-45&#34; name=&#34;sec-1-45&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;names-become-enduringly-meaningful-a-id-sec-1-45-1-name-sec-1-45-1-a&#34;&gt;names become enduringly meaningful&lt;a id=&#34;sec-1-45-1&#34; name=&#34;sec-1-45-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;orthogonal-compatibility-checking-becomes-possible-a-id-sec-1-45-2-name-sec-1-45-2-a&#34;&gt;orthogonal compatibility checking becomes possible&lt;a id=&#34;sec-1-45-2&#34; name=&#34;sec-1-45-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;find-grained-deps-can-be-explored-a-id-sec-1-45-3-name-sec-1-45-3-a&#34;&gt;find-grained deps can be explored&lt;a id=&#34;sec-1-45-3&#34; name=&#34;sec-1-45-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;use-the-latest-with-impunity-a-id-sec-1-45-4-name-sec-1-45-4-a&#34;&gt;use the latest with impunity&lt;a id=&#34;sec-1-45-4&#34; name=&#34;sec-1-45-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;compose-with-impunity-a-id-sec-1-45-5-name-sec-1-45-5-a&#34;&gt;compose with impunity&lt;a id=&#34;sec-1-45-5&#34; name=&#34;sec-1-45-5&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-10-54-open-challenges-a-id-sec-1-46-name-sec-1-46-a&#34;&gt;1:10:54 Open Challenges&lt;a id=&#34;sec-1-46&#34; name=&#34;sec-1-46&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;we-can-t-see-some-changes-a-id-sec-1-46-1-name-sec-1-46-1-a&#34;&gt;We can&amp;rsquo;t &amp;lsquo;see&amp;rsquo; some changes&lt;a id=&#34;sec-1-46-1&#34; name=&#34;sec-1-46-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;collection adds are easy&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;fn args/ret not visible in source&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;specs can help&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;spec-compatibility-context-dependent-a-id-sec-1-46-2-name-sec-1-46-2-a&#34;&gt;spec compatibility context-dependent&lt;a id=&#34;sec-1-46-2&#34; name=&#34;sec-1-46-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;provide vs require&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;repo-artifact-namespaces-not-first-class-a-id-sec-1-46-3-name-sec-1-46-3-a&#34;&gt;repo-&amp;gt;artifact-&amp;gt;namespaces not first class&lt;a id=&#34;sec-1-46-3&#34; name=&#34;sec-1-46-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;tooling-that-reinforces-the-status-quo-a-id-sec-1-46-4-name-sec-1-46-4-a&#34;&gt;tooling that reinforces the status quo&lt;a id=&#34;sec-1-46-4&#34; name=&#34;sec-1-46-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h1 id=&#34;1-12-40-opportunities-for-clojure-a-id-sec-1-47-name-sec-1-47-a&#34;&gt;1:12:40 Opportunities for Clojure&lt;a id=&#34;sec-1-47&#34; name=&#34;sec-1-47&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;spec-a-id-sec-1-47-1-name-sec-1-47-1-a&#34;&gt;spec&lt;a id=&#34;sec-1-47-1&#34; name=&#34;sec-1-47-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;flexible-vs-fragile-brittle-dep-awareness-a-id-sec-1-47-2-name-sec-1-47-2-a&#34;&gt;Flexible (vs fragile/brittle) dep awareness&lt;a id=&#34;sec-1-47-2&#34; name=&#34;sec-1-47-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;explicit-code-artifact-repo-support-a-id-sec-1-47-3-name-sec-1-47-3-a&#34;&gt;Explicit code-&amp;gt;artifact/repo support&lt;a id=&#34;sec-1-47-3&#34; name=&#34;sec-1-47-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;first-class-fine-grained-publish-for-apis-a-id-sec-1-47-4-name-sec-1-47-4-a&#34;&gt;First-class, fine-grained &amp;lsquo;publish&amp;rsquo; for APIs&lt;a id=&#34;sec-1-47-4&#34; name=&#34;sec-1-47-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ditto deprecation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;testing-based-on-fine-grained-deps-a-id-sec-1-47-5-name-sec-1-47-5-a&#34;&gt;Testing based on fine-grained deps&lt;a id=&#34;sec-1-47-5&#34; name=&#34;sec-1-47-5&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;generative testing needs this&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;1-14-23-exchange-change-a-id-sec-1-48-name-sec-1-48-a&#34;&gt;1:14:23 Exchange &amp;gt; Change&lt;a id=&#34;sec-1-48&#34; name=&#34;sec-1-48&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;grow-your-software-a-id-sec-1-48-1-name-sec-1-48-1-a&#34;&gt;Grow your software&lt;a id=&#34;sec-1-48-1&#34; name=&#34;sec-1-48-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;give-birth-to-variation-a-id-sec-1-48-2-name-sec-1-48-2-a&#34;&gt;Give birth to variation&lt;a id=&#34;sec-1-48-2&#34; name=&#34;sec-1-48-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Don&amp;rsquo;t break, accrete&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;think-of-the-children-consumers-a-id-sec-1-48-3-name-sec-1-48-3-a&#34;&gt;Think of the -children- consumers&lt;a id=&#34;sec-1-48-3&#34; name=&#34;sec-1-48-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;move-forward-without-burning-bridges-a-id-sec-1-48-4-name-sec-1-48-4-a&#34;&gt;Move forward without burning bridges&lt;a id=&#34;sec-1-48-4&#34; name=&#34;sec-1-48-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;create-a-lib-service-ecosystem-of-which-we-can-all-be-proud-a-id-sec-1-48-5-name-sec-1-48-5-a&#34;&gt;Create a lib/service ecosystem of which we can all be proud&lt;a id=&#34;sec-1-48-5&#34; name=&#34;sec-1-48-5&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
     
     <item>
       <title>Why I Chose Hugo</title>
