@@ -1,0 +1,1266 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Spec-ulation</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.17" />
+        
+
+
+        
+            <meta name="author" content="beppu">
+        
+        
+            <meta name="description" content="Rich Hickey Deconstructs Semantic Versioning">
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Spec-ulation"/>
+<meta name="twitter:description" content="Rich Hickey Deconstructs Semantic Versioning"/>
+<meta name="twitter:site" content="@beppu"/>
+
+
+        <meta property="og:title" content="Spec-ulation" />
+<meta property="og:description" content="Rich Hickey Deconstructs Semantic Versioning" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://beppu.github.io/post/spec-ulation/" />
+
+
+<meta property="og:updated_time" content="2016-12-10T18:47:59-08:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Spec-ulation">
+<meta itemprop="description" content="Rich Hickey Deconstructs Semantic Versioning">
+
+
+<meta itemprop="dateModified" content="2016-12-10T18:47:59-08:00" />
+<meta itemprop="wordCount" content="1254">
+
+
+
+<meta itemprop="keywords" content="frameworks,hugo,libraries," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <link rel="stylesheet" href="/css/main.min.css" />
+                
+            
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Beppu&#39;s Blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/categories">
+                        Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://beppu.github.io/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://beppu.github.io/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://beppu.github.io/post/spec-ulation/"><p>Spec-ulation</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://beppu.github.io/post/why-i-chose-hugo/"><p>Why I Chose Hugo</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&text=Spec-ulation&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by beppu&body=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://beppu.github.io/post/spec-ulation/">Spec-ulation</a></h1>
+            
+        
+        
+            <p>Rich Hickey Deconstructs Semantic Versioning</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-12-10'>
+            December 10, 2016</time>
+        <span class="author">beppu</span>
+        
+            <p>6 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&text=Spec-ulation&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f&title=Spec-ulation" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by beppu&body=http%3a%2f%2fbeppu.github.io%2fpost%2fspec-ulation%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/oyLBGkS5ICk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+<p><a href="https://www.youtube.com/watch?v=oyLBGkS5ICk">https://www.youtube.com/watch?v=oyLBGkS5ICk</a></p>
+
+<style>
+#content h1 {
+  margin-top: 1em;
+  border-top: 1px solid #888;
+}
+
+#content h2 {
+  font-size: 13px;
+}
+</style>
+
+<h1 id="tl-dw">tl;dw</h1>
+
+<p>Coming soon&hellip;</p>
+
+<h1 id="0-00-spec-ulation-a-id-sec-1-2-name-sec-1-2-a">0:00 Spec-ulation<a id="sec-1-2" name="sec-1-2"></a></h1>
+
+<p>Rich Hickey</p>
+
+<h1 id="0-58-this-is-not-a-talk-about-spec-a-id-sec-1-3-name-sec-1-3-a">0:58 This is not a talk about spec<a id="sec-1-3" name="sec-1-3"></a></h1>
+
+<h2 id="it-s-a-talk-about-what-spec-is-about-a-id-sec-1-3-1-name-sec-1-3-1-a">It&rsquo;s a talk about what spec is about<a id="sec-1-3-1" name="sec-1-3-1"></a></h2>
+
+<ol>
+<li>Giving something to someone that they can use</li>
+<li>Making a commitment
+
+<ol>
+<li>i.e. not taking it away later</li>
+</ol></li>
+</ol>
+
+<h1 id="2-46-change-a-id-sec-1-4-name-sec-1-4-a">2:46 Change<a id="sec-1-4" name="sec-1-4"></a></h1>
+
+<p>is it a thing?</p>
+
+<h1 id="3-35-change-a-id-sec-1-5-name-sec-1-5-a">3:35 &lsquo;Change&rsquo;<a id="sec-1-5" name="sec-1-5"></a></h1>
+
+<h2 id="origin-a-id-sec-1-5-1-name-sec-1-5-1-a">Origin:<a id="sec-1-5-1" name="sec-1-5-1"></a></h2>
+
+<ol>
+<li>from Latin cambire &ldquo;to exchange, barter&rdquo;</li>
+</ol>
+
+<h2 id="you-could-change-a-cow-into-wheat-a-id-sec-1-5-2-name-sec-1-5-2-a">You could change a cow into wheat!<a id="sec-1-5-2" name="sec-1-5-2"></a></h2>
+
+<ol>
+<li>c.f. Eurogames</li>
+</ol>
+
+<h2 id="one-sided-change-is-x2026-theft-a-id-sec-1-5-3-name-sec-1-5-3-a">One-sided change is&#x2026; theft?<a id="sec-1-5-3" name="sec-1-5-3"></a></h2>
+
+<ol>
+<li>Anti-social at least</li>
+</ol>
+
+<h2 id="productivity-and-soul-crushing-at-worst-a-id-sec-1-5-4-name-sec-1-5-4-a">Productivity and soul-crushing at worst?<a id="sec-1-5-4" name="sec-1-5-4"></a></h2>
+
+<h1 id="5-13-a-id-sec-1-6-name-sec-1-6-a">5:13<a id="sec-1-6" name="sec-1-6"></a></h1>
+
+<p>We want our software (esp.
+libraries/services to be
+different/better tomorrow.</p>
+
+<p>What will that mean for our consumers?</p>
+
+<h1 id="5-42-dependencies-a-id-sec-1-7-name-sec-1-7-a">5:42 Dependencies<a id="sec-1-7" name="sec-1-7"></a></h1>
+
+<p>[image of versioned library dependency tree]</p>
+
+<h1 id="6-59-but-x2026-a-id-sec-1-8-name-sec-1-8-a">6:59 But&#x2026;<a id="sec-1-8" name="sec-1-8"></a></h1>
+
+<h2 id="artifacts-don-t-actually-use-other-artifacts-a-id-sec-1-8-1-name-sec-1-8-1-a">Artifacts don&rsquo;t actually use other artifacts<a id="sec-1-8-1" name="sec-1-8-1"></a></h2>
+
+<h2 id="there-is-nothing-in-the-code-about-artifacts-a-id-sec-1-8-2-name-sec-1-8-2-a">There is nothing in the code about artifacts<a id="sec-1-8-2" name="sec-1-8-2"></a></h2>
+
+<h1 id="7-45-dependencies-redux-a-id-sec-1-9-name-sec-1-9-a">7:45 Dependencies Redux<a id="sec-1-9" name="sec-1-9"></a></h1>
+
+<p>[image of versioned library dependency tree broken down by namespace]
+[exposes opportunity for dead code elimination; don&rsquo;t need library z]</p>
+
+<h1 id="9-46-but-x2026-a-id-sec-1-10-name-sec-1-10-a">9:46 But&#x2026;<a id="sec-1-10" name="sec-1-10"></a></h1>
+
+<h2 id="namespaces-packages-don-t-actually-use-other-namespaces-packages-a-id-sec-1-10-1-name-sec-1-10-1-a">Namespaces/packages don&rsquo;t actually use other namespaces/packages<a id="sec-1-10-1" name="sec-1-10-1"></a></h2>
+
+<h2 id="at-least-require-import-appear-in-the-code-a-id-sec-1-10-2-name-sec-1-10-2-a">At least require/import appear in the code<a id="sec-1-10-2" name="sec-1-10-2"></a></h2>
+
+<h2 id="where-is-the-mapping-to-artifacts-no-mapping-of-artifact-to-namespaces-a-id-sec-1-10-3-name-sec-1-10-3-a">Where is the mapping to artifacts? [no mapping of artifact to namespaces]<a id="sec-1-10-3" name="sec-1-10-3"></a></h2>
+
+<h1 id="10-48-dependency-truth-code-a-id-sec-1-11-name-sec-1-11-a">10:48 Dependency Truth (code)<a id="sec-1-11" name="sec-1-11"></a></h1>
+
+<p>[image of namespaces further broken down by function dependencies]
+[shows hat lib X is not a true dependency]</p>
+
+<h1 id="13-45-do-deps-force-versioning-a-id-sec-1-12-name-sec-1-12-a">13:45 Do deps Force Versioning?<a id="sec-1-12" name="sec-1-12"></a></h1>
+
+<p>&ldquo;What you can do is let Semantic Versioning provide you
+with a sane way to release and upgrade packages without
+having to roll new versions of dependent packages&rdquo;
+<a href="http://semver.org/spec/v2.0.0.html">http://semver.org/spec/v2.0.0.html</a></p>
+
+<h2 id="is-that-what-happens-a-id-sec-1-12-1-name-sec-1-12-1-a">Is that what happens?<a id="sec-1-12-1" name="sec-1-12-1"></a></h2>
+
+<h2 id="often-no-cascading-version-bumps-a-id-sec-1-12-2-name-sec-1-12-2-a">Often, no, cascading version bumps<a id="sec-1-12-2" name="sec-1-12-2"></a></h2>
+
+<ol>
+<li><p>to let root &lsquo;know&rsquo; about improvements to leaves, even if path nodes&rsquo; code unchanged</p></li>
+
+<li><p>level violation</p></li>
+</ol>
+
+<h1 id="15-27-names-levels-scopes-contexts-a-id-sec-1-13-name-sec-1-13-a">15:27 Names, Levels, Scopes, Contexts<a id="sec-1-13" name="sec-1-13"></a></h1>
+
+<h2 id="fns-depend-on-call-fns-by-name-a-id-sec-1-13-1-name-sec-1-13-1-a">fns depend on (call) fns by name<a id="sec-1-13-1" name="sec-1-13-1"></a></h2>
+
+<h2 id="ns-packages-requires-includes-set-up-a-context-in-which-those-calls-can-succeed-a-id-sec-1-13-2-name-sec-1-13-2-a">ns/packages requires/includes set up a context in which those calls can succeed<a id="sec-1-13-2" name="sec-1-13-2"></a></h2>
+
+<h2 id="artifact-deps-poms-set-up-a-context-in-which-those-requires-can-succeed-a-id-sec-1-13-3-name-sec-1-13-3-a">Artifact deps/poms set up a context in which those requires can succeed<a id="sec-1-13-3" name="sec-1-13-3"></a></h2>
+
+<h2 id="fn-name-scopes-include-ns-but-not-artifact-a-id-sec-1-13-4-name-sec-1-13-4-a">fn name scopes include ns but not artifact<a id="sec-1-13-4" name="sec-1-13-4"></a></h2>
+
+<ol>
+<li>artifact context is MAGIC</li>
+</ol>
+
+<h1 id="17-19-basis-a-id-sec-1-14-name-sec-1-14-a">17:19 Basis<a id="sec-1-14" name="sec-1-14"></a></h1>
+
+<h2 id="why-do-we-put-things-in-our-deps-a-id-sec-1-14-1-name-sec-1-14-1-a">Why do we put things in our deps?<a id="sec-1-14-1" name="sec-1-14-1"></a></h2>
+
+<ol>
+<li><p>We need access to libs while developing</p></li>
+
+<li><p>Maven chases transitive deps</p></li>
+
+<li><p>Incorporated in artifact to communicate needs to our consumers</p></li>
+
+<li><p>&ldquo;we tested against x,y,z&rdquo;</p></li>
+</ol>
+
+<h2 id="but-course-grained-implies-too-much-a-id-sec-1-14-2-name-sec-1-14-2-a">But, course-grained, implies too much<a id="sec-1-14-2" name="sec-1-14-2"></a></h2>
+
+<ol>
+<li>doesn&rsquo;t capture actual deps, just context</li>
+</ol>
+
+<h1 id="19-49-ex-changes-in-software-important-declarations-a-id-sec-1-15-name-sec-1-15-a">19:49 (Ex)changes in Software     :important:declarations:<a id="sec-1-15" name="sec-1-15"></a></h1>
+
+<h2 id="what-is-required-a-id-sec-1-15-1-name-sec-1-15-1-a">What is required?<a id="sec-1-15-1" name="sec-1-15-1"></a></h2>
+
+<ol>
+<li><p>fn - args</p></li>
+
+<li><p>ns - var names</p></li>
+
+<li><p>artifact  ns/package names/paths</p></li>
+</ol>
+
+<h2 id="what-is-provided-a-id-sec-1-15-2-name-sec-1-15-2-a">What is provided?<a id="sec-1-15-2" name="sec-1-15-2"></a></h2>
+
+<ol>
+<li><p>fn - ret (proc/service effect)</p></li>
+
+<li><p>ns - vars/fns</p></li>
+
+<li><p>artifact - namespaces/packages</p></li>
+</ol>
+
+<h1 id="22-11-growing-your-software-a-id-sec-1-16-name-sec-1-16-a">22:11 Growing Your Software<a id="sec-1-16" name="sec-1-16"></a></h1>
+
+<h2 id="accretion-a-id-sec-1-16-1-name-sec-1-16-1-a">Accretion<a id="sec-1-16-1" name="sec-1-16-1"></a></h2>
+
+<ol>
+<li>provide more</li>
+</ol>
+
+<h2 id="relaxation-a-id-sec-1-16-2-name-sec-1-16-2-a">Relaxation<a id="sec-1-16-2" name="sec-1-16-2"></a></h2>
+
+<ol>
+<li>require less</li>
+</ol>
+
+<h2 id="fixation-a-id-sec-1-16-3-name-sec-1-16-3-a">Fixation<a id="sec-1-16-3" name="sec-1-16-3"></a></h2>
+
+<ol>
+<li>bash bugs</li>
+</ol>
+
+<h1 id="24-14-breaking-your-software-a-id-sec-1-17-name-sec-1-17-a">24:14 Breaking Your Software<a id="sec-1-17" name="sec-1-17"></a></h1>
+
+<h2 id="require-more-a-id-sec-1-17-1-name-sec-1-17-1-a">Require more<a id="sec-1-17-1" name="sec-1-17-1"></a></h2>
+
+<h2 id="provide-less-a-id-sec-1-17-2-name-sec-1-17-2-a">Provide less<a id="sec-1-17-2" name="sec-1-17-2"></a></h2>
+
+<h2 id="unrelated-stuff-under-same-name-a-id-sec-1-17-3-name-sec-1-17-3-a">Unrelated stuff under same name<a id="sec-1-17-3" name="sec-1-17-3"></a></h2>
+
+<h1 id="25-55-change-is-not-a-thing-a-id-sec-1-18-name-sec-1-18-a">25:55 Change is Not a Thing<a id="sec-1-18" name="sec-1-18"></a></h1>
+
+<h2 id="it-s-one-of-two-things-a-id-sec-1-18-1-name-sec-1-18-1-a">It&rsquo;s one of two things<a id="sec-1-18-1" name="sec-1-18-1"></a></h2>
+
+<ol>
+<li><p>Growth</p></li>
+
+<li><p>Breakage</p></li>
+</ol>
+
+<h2 id="in-the-small-fns-spec-can-help-us-determine-which-prevent-breaking-specs-a-id-sec-1-18-2-name-sec-1-18-2-a">In the small (fns), spec can help us determine which, prevent breaking specs<a id="sec-1-18-2" name="sec-1-18-2"></a></h2>
+
+<h2 id="as-long-as-we-don-t-try-to-do-something-silly-like-versioning-specs-a-id-sec-1-18-3-name-sec-1-18-3-a">As long as we don&rsquo;t try to do something silly like versioning specs!<a id="sec-1-18-3" name="sec-1-18-3"></a></h2>
+
+<h1 id="27-56-recognizing-collections-a-id-sec-1-19-name-sec-1-19-a">27:56 Recognizing Collections<a id="sec-1-19" name="sec-1-19"></a></h1>
+
+<h2 id="you-only-change-a-collection-by-adding-removing-members-a-id-sec-1-19-1-name-sec-1-19-1-a">You only &lsquo;change&rsquo; a collection by adding/removing members<a id="sec-1-19-1" name="sec-1-19-1"></a></h2>
+
+<h2 id="adding-growth-removing-breakage-a-id-sec-1-19-2-name-sec-1-19-2-a">Adding = growth, removing = breakage<a id="sec-1-19-2" name="sec-1-19-2"></a></h2>
+
+<h2 id="namespaces-collections-of-vars-fns-a-id-sec-1-19-3-name-sec-1-19-3-a">Namespaces - collections of vars/fns<a id="sec-1-19-3" name="sec-1-19-3"></a></h2>
+
+<h2 id="artifacts-collections-of-namespaces-packages-a-id-sec-1-19-4-name-sec-1-19-4-a">Artifacts - collections of namespaces/packages<a id="sec-1-19-4" name="sec-1-19-4"></a></h2>
+
+<h2 id="don-t-conflate-levels-a-id-sec-1-19-5-name-sec-1-19-5-a">Don&rsquo;t conflate levels!<a id="sec-1-19-5" name="sec-1-19-5"></a></h2>
+
+<ol>
+<li>My family doesn&rsquo;t change when I put on a hat</li>
+</ol>
+
+<h2 id="everything-intersting-happens-at-the-leaves-a-id-sec-1-19-6-name-sec-1-19-6-a">(Everything intersting happens at the leaves.)<a id="sec-1-19-6" name="sec-1-19-6"></a></h2>
+
+<h1 id="29-52-semantic-versioning-semantics-a-id-sec-1-20-name-sec-1-20-a">29:52 &ldquo;Semantic&rdquo; Versioning &ldquo;Semantics&rdquo;<a id="sec-1-20" name="sec-1-20"></a></h1>
+
+<h2 id="1-2-changed-a-id-sec-1-20-1-name-sec-1-20-1-a">1.2.changed<a id="sec-1-20-1" name="sec-1-20-1"></a></h2>
+
+<ol>
+<li>&ldquo;you don&rsquo;t care&rdquo;</li>
+</ol>
+
+<h2 id="1-changed-0-a-id-sec-1-20-2-name-sec-1-20-2-a">1.changed.0<a id="sec-1-20-2" name="sec-1-20-2"></a></h2>
+
+<ol>
+<li>&ldquo;you don&rsquo;t care&rdquo;</li>
+</ol>
+
+<h2 id="changed-0-0-a-id-sec-1-20-3-name-sec-1-20-3-a">changed.0.0<a id="sec-1-20-3" name="sec-1-20-3"></a></h2>
+
+<ol>
+<li>&ldquo;you&rsquo;re screwed&rdquo;</li>
+</ol>
+
+<h1 id="31-18-even-worse-x2026-a-id-sec-1-21-name-sec-1-21-a">31:18 Even worse&#x2026;<a id="sec-1-21" name="sec-1-21"></a></h1>
+
+<h2 id="you-might-be-screwed-a-id-sec-1-21-1-name-sec-1-21-1-a">&ldquo;you might be screwed&rdquo;<a id="sec-1-21-1" name="sec-1-21-1"></a></h2>
+
+<h2 id="considered-covering-of-change-at-all-levels-a-id-sec-1-21-2-name-sec-1-21-2-a">Considered covering of change at all levels<a id="sec-1-21-2" name="sec-1-21-2"></a></h2>
+
+<ol>
+<li>Good luck determining where</li>
+</ol>
+
+<h2 id="might-just-as-well-change-the-name-a-id-sec-1-21-3-name-sec-1-21-3-a">Might just as well change the name<a id="sec-1-21-3" name="sec-1-21-3"></a></h2>
+
+<h1 id="32-26-might-as-well-change-the-name-a-id-sec-1-22-name-sec-1-22-a">32:26 Might as well change the name<a id="sec-1-22" name="sec-1-22"></a></h1>
+
+<h1 id="32-28-might-as-well-change-the-name-a-id-sec-1-23-name-sec-1-23-a">32:28 MIGHT AS WELL CHANGE THE NAME<a id="sec-1-23" name="sec-1-23"></a></h1>
+
+<h1 id="32-52-but-x2026-a-id-sec-1-24-name-sec-1-24-a">32:52 But&#x2026;<a id="sec-1-24" name="sec-1-24"></a></h1>
+
+<p>that&rsquo;s not change,
+That&rsquo;s a new thing!
+Right.</p>
+
+<h1 id="33-09-which-name-a-id-sec-1-25-name-sec-1-25-a">33:09 Which name?<a id="sec-1-25" name="sec-1-25"></a></h1>
+
+<p>Levels again</p>
+
+<h1 id="33-39-requiring-more-args-providing-less-on-return-a-id-sec-1-26-name-sec-1-26-a">33:39 Requiring More args?  Providing Less on return?<a id="sec-1-26" name="sec-1-26"></a></h1>
+
+<h2 id="i-e-incompatible-spec-a-id-sec-1-26-1-name-sec-1-26-1-a">i.e. incompatible spec<a id="sec-1-26-1" name="sec-1-26-1"></a></h2>
+
+<h2 id="new-function-a-id-sec-1-26-2-name-sec-1-26-2-a">new function<a id="sec-1-26-2" name="sec-1-26-2"></a></h2>
+
+<p>old-ns/foo-2 or new-ns/foo</p>
+
+<h2 id="n-b-the-namespace-is-port-of-the-name-a-id-sec-1-26-3-name-sec-1-26-3-a">N.B - the namespace is port of the name<a id="sec-1-26-3" name="sec-1-26-3"></a></h2>
+
+<ol>
+<li>ns aliases can ease transition</li>
+</ol>
+
+<h1 id="36-14-providing-fewer-fns-vars-a-id-sec-1-27-name-sec-1-27-a">36:14 Providing Fewer fns/vars?<a id="sec-1-27" name="sec-1-27"></a></h1>
+
+<h2 id="new-namespace-package-a-id-sec-1-27-1-name-sec-1-27-1-a">New namespace/package<a id="sec-1-27-1" name="sec-1-27-1"></a></h2>
+
+<h1 id="37-20-providing-fewer-namespaces-packages-a-id-sec-1-28-name-sec-1-28-a">37:20 Providing Fewer namespaces/packages?<a id="sec-1-28" name="sec-1-28"></a></h1>
+
+<h2 id="new-artifactid-a-id-sec-1-28-1-name-sec-1-28-1-a">New artifactId?<a id="sec-1-28-1" name="sec-1-28-1"></a></h2>
+
+<h2 id="but-x2026-that-s-what-major-segment-is-for-a-id-sec-1-28-2-name-sec-1-28-2-a">but&#x2026; that&rsquo;s what MAJOR segment is for?<a id="sec-1-28-2" name="sec-1-28-2"></a></h2>
+
+<ol>
+<li><p>no, &ldquo;any backwards incompatible changes&rdquo;</p>
+
+<p>i.e. too-broad &ldquo;semantic&rdquo;</p></li>
+
+<li><p>The problem is artifact-&gt;namespaces magic means possibility of collision</p>
+
+<ol>
+<li>No &lsquo;scope&rsquo; implicitly renaming children</li>
+</ol></li>
+</ol>
+
+<h2 id="rich-was-not-sure-what-the-right-strategy-for-this-situaion-is-a-id-sec-1-28-3-name-sec-1-28-3-a">[Rich was not sure what the right strategy for this situaion is.]<a id="sec-1-28-3" name="sec-1-28-3"></a></h2>
+
+<h1 id="40-33-doesn-t-doing-the-right-thing-name-wise-make-you-reluctant-to-remove-things-a-id-sec-1-29-name-sec-1-29-a">40:33 Doesn&rsquo;t Doing the Right Thing Name-wise Make You Reluctant to Remove Things?<a id="sec-1-29" name="sec-1-29"></a></h1>
+
+<p>Yes. Good.</p>
+
+<h1 id="41-02-breaking-changes-are-broken-a-id-sec-1-30-name-sec-1-30-a">41:02 Breaking Changes are Broken<a id="sec-1-30" name="sec-1-30"></a></h1>
+
+<h2 id="full-stop-a-id-sec-1-30-1-name-sec-1-30-1-a">Full Stop<a id="sec-1-30-1" name="sec-1-30-1"></a></h2>
+
+<h2 id="don-t-do-it-a-id-sec-1-30-2-name-sec-1-30-2-a">Don&rsquo;t do it<a id="sec-1-30-2" name="sec-1-30-2"></a></h2>
+
+<h2 id="don-t-try-to-figure-out-the-best-way-to-do-it-a-id-sec-1-30-3-name-sec-1-30-3-a">Don&rsquo;t try to figure out the best way to do it<a id="sec-1-30-3" name="sec-1-30-3"></a></h2>
+
+<h2 id="avoid-breakage-by-turning-it-into-accretion-a-id-sec-1-30-4-name-sec-1-30-4-a">Avoid breakage by turning it into accretion<a id="sec-1-30-4" name="sec-1-30-4"></a></h2>
+
+<ol>
+<li>old and new can co-exist</li>
+</ol>
+
+<h1 id="42-25-so-maven-is-broken-a-id-sec-1-31-name-sec-1-31-a">42:25 So Maven is Broken?<a id="sec-1-31" name="sec-1-31"></a></h1>
+
+<h2 id="not-really-how-we-use-it-may-be-broken-a-id-sec-1-31-1-name-sec-1-31-1-a">Not really - how we use it may be broken<a id="sec-1-31-1" name="sec-1-31-1"></a></h2>
+
+<h2 id="maven-central-doesn-t-let-you-change-artifacts-a-id-sec-1-31-2-name-sec-1-31-2-a">Maven central doesn&rsquo;t let you &lsquo;change&rsquo; artifacts<a id="sec-1-31-2" name="sec-1-31-2"></a></h2>
+
+<ol>
+<li><p>and never &lsquo;breaks&rsquo;, is not versioned!!</p>
+
+<ol>
+<li>no &ldquo;I&rsquo;m using maven central 1234567.0.0&rdquo;</li>
+</ol></li>
+</ol>
+
+<h2 id="you-re-always-hapy-to-use-latest-maven-central-a-id-sec-1-31-3-name-sec-1-31-3-a">You&rsquo;re always hapy to use latest maven central<a id="sec-1-31-3" name="sec-1-31-3"></a></h2>
+
+<ol>
+<li><p>Why?</p></li>
+
+<li><p>it&rsquo;s an accreting collection of immutable things</p></li>
+</ol>
+
+<h1 id="44-27-insert-rotten-sandwich-image-here-a-id-sec-1-32-name-sec-1-32-a">44:27 (insert rotten sandwich image here)<a id="sec-1-32" name="sec-1-32"></a></h1>
+
+<h1 id="46-29-so-semver-is-broken-a-id-sec-1-33-name-sec-1-33-a">46:29 So SemVer is Broken?<a id="sec-1-33" name="sec-1-33"></a></h1>
+
+<h2 id="yes-a-id-sec-1-33-1-name-sec-1-33-1-a">Yes<a id="sec-1-33-1" name="sec-1-33-1"></a></h2>
+
+<ol>
+<li><p>It is, in part, about how to ship breakage</p></li>
+
+<li><p>and the other &lsquo;semantics&rsquo; are of little utility</p></li>
+</ol>
+
+<h2 id="what-instead-a-id-sec-1-33-2-name-sec-1-33-2-a">What instead?<a id="sec-1-33-2" name="sec-1-33-2"></a></h2>
+
+<ol>
+<li><p>Maybe chronological versioning?</p>
+
+<ol>
+<li>YYYYMMDD.HHMMSS</li>
+</ol></li>
+
+<li><p>Conveys more and supports some forms of relativism</p></li>
+</ol>
+
+<h1 id="48-47-what-about-git-a-id-sec-1-34-name-sec-1-34-a">48:47 What about Git?<a id="sec-1-34" name="sec-1-34"></a></h1>
+
+<h2 id="wonderful-immutable-truth-of-the-code-system-widely-adopted-a-id-sec-1-34-1-name-sec-1-34-1-a">Wonderful, immutable, truth-of-the-code system, widely adopted<a id="sec-1-34-1" name="sec-1-34-1"></a></h2>
+
+<h2 id="content-based-addressing-a-id-sec-1-34-2-name-sec-1-34-2-a">Content-based addressing<a id="sec-1-34-2" name="sec-1-34-2"></a></h2>
+
+<h2 id="almost-completely-ignored-by-artifacts-versioning-even-though-code-basis-a-id-sec-1-34-3-name-sec-1-34-3-a">Almost completely ignored by artifacts/versioning, even though code basis<a id="sec-1-34-3" name="sec-1-34-3"></a></h2>
+
+<h2 id="deserves-a-role-a-id-sec-1-34-4-name-sec-1-34-4-a">Deserves a role<a id="sec-1-34-4" name="sec-1-34-4"></a></h2>
+
+<ol>
+<li>but, SHAs vs order/causality/readability</li>
+</ol>
+
+<h1 id="50-37-it-s-a-social-thing-a-id-sec-1-35-name-sec-1-35-a">50:37 It&rsquo;s a Social Thing<a id="sec-1-35" name="sec-1-35"></a></h1>
+
+<h2 id="we-won-t-be-albe-to-tech-ourselves-out-of-this-a-id-sec-1-35-1-name-sec-1-35-1-a">We won&rsquo;t be albe to tech ourselves out of this<a id="sec-1-35-1" name="sec-1-35-1"></a></h2>
+
+<h2 id="we-need-to-agree-that-treating-each-other-well-is-important-a-id-sec-1-35-2-name-sec-1-35-2-a">We need to agree that treating each other well is important<a id="sec-1-35-2" name="sec-1-35-2"></a></h2>
+
+<h1 id="51-18-local-dev-vs-open-dev-a-id-sec-1-36-name-sec-1-36-a">51:18 Local dev vs Open dev<a id="sec-1-36" name="sec-1-36"></a></h1>
+
+<h2 id="incompatible-churn-acceptable-in-private-a-id-sec-1-36-1-name-sec-1-36-1-a">Incompatible churn acceptable in private<a id="sec-1-36-1" name="sec-1-36-1"></a></h2>
+
+<h2 id="slack-is-not-standup-a-id-sec-1-36-2-name-sec-1-36-2-a">Slack is not standup<a id="sec-1-36-2" name="sec-1-36-2"></a></h2>
+
+<h2 id="os-user-base-is-open-and-unknown-a-id-sec-1-36-3-name-sec-1-36-3-a">OS user base is open and unknown<a id="sec-1-36-3" name="sec-1-36-3"></a></h2>
+
+<h1 id="54-18-coding-for-growth-a-id-sec-1-37-name-sec-1-37-a">54:18 Coding for Growth<a id="sec-1-37" name="sec-1-37"></a></h1>
+
+<h2 id="open-specs-and-data-formats-are-key-a-id-sec-1-37-1-name-sec-1-37-1-a">Open specs and data formats are key<a id="sec-1-37-1" name="sec-1-37-1"></a></h2>
+
+<h2 id="specs-are-about-what-you-can-do-not-about-what-you-can-t-a-id-sec-1-37-2-name-sec-1-37-2-a">Specs are about what you can do, not about what you can&rsquo;t<a id="sec-1-37-2" name="sec-1-37-2"></a></h2>
+
+<h2 id="prohibition-turns-growth-into-breakage-cascades-a-id-sec-1-37-3-name-sec-1-37-3-a">Prohibition turns growth into breakage, cascades<a id="sec-1-37-3" name="sec-1-37-3"></a></h2>
+
+<h2 id="always-presume-you-might-be-handed-more-than-what-you-need-or-know-about-a-id-sec-1-37-4-name-sec-1-37-4-a">Always presume you might be handed more than what you need or know about<a id="sec-1-37-4" name="sec-1-37-4"></a></h2>
+
+<ol>
+<li>ignore, or have policy for it</li>
+</ol>
+
+<h1 id="58-31-what-about-iterative-development-a-id-sec-1-38-name-sec-1-38-a">58:31 What about Iterative Development?<a id="sec-1-38" name="sec-1-38"></a></h1>
+
+<h2 id="alphas-are-ok-a-id-sec-1-38-1-name-sec-1-38-1-a">Alphas are OK<a id="sec-1-38-1" name="sec-1-38-1"></a></h2>
+
+<h2 id="but-maybe-should-be-in-artifactid-a-id-sec-1-38-2-name-sec-1-38-2-a">But maybe should be in artifactId<a id="sec-1-38-2" name="sec-1-38-2"></a></h2>
+
+<h2 id="or-incremental-api-publishing-a-id-sec-1-38-3-name-sec-1-38-3-a">Or - incremental API &lsquo;publishing&rsquo;<a id="sec-1-38-3" name="sec-1-38-3"></a></h2>
+
+<h2 id="open-source-is-not-an-excuse-for-indefinite-public-thrashing-around-a-id-sec-1-38-4-name-sec-1-38-4-a">Open source is not an excuse for indefinite public thrashing around<a id="sec-1-38-4" name="sec-1-38-4"></a></h2>
+
+<h1 id="1-00-14-the-only-truth-is-runtime-a-id-sec-1-39-name-sec-1-39-a">1:00:14 The Only Truth is Runtime<a id="sec-1-39" name="sec-1-39"></a></h1>
+
+<h2 id="deps-poms-are-just-suggestions-a-id-sec-1-39-1-name-sec-1-39-1-a">Deps/POMs are just suggestions<a id="sec-1-39-1" name="sec-1-39-1"></a></h2>
+
+<ol>
+<li>can be full of &lsquo;conflicts&rsquo;</li>
+</ol>
+
+<h2 id="someone-needs-to-build-a-classpath-a-id-sec-1-39-2-name-sec-1-39-2-a">Someone needs to build a classpath<a id="sec-1-39-2" name="sec-1-39-2"></a></h2>
+
+<ol>
+<li>that alone determines runtime context</li>
+</ol>
+
+<h2 id="possibly-a-lib-set-that-none-of-the-components-have-ever-run-against-a-id-sec-1-39-3-name-sec-1-39-3-a">Possibly a lib set that none of the components have ever run against<a id="sec-1-39-3" name="sec-1-39-3"></a></h2>
+
+<h1 id="1-01-59-testing-is-runtime-dependent-a-id-sec-1-40-name-sec-1-40-a">1:01:59 Testing is Runtime Dependent<a id="sec-1-40" name="sec-1-40"></a></h1>
+
+<h2 id="and-runtimes-are-independent-if-related-of-dev-and-build-time-deps-a-id-sec-1-40-1-name-sec-1-40-1-a">And runtimes are independent (if related) of dev- and build-time deps<a id="sec-1-40-1" name="sec-1-40-1"></a></h2>
+
+<h2 id="plus-you-can-t-test-against-an-open-set-of-consumers-a-id-sec-1-40-2-name-sec-1-40-2-a">Plus, you can&rsquo;t test against an open set of consumers<a id="sec-1-40-2" name="sec-1-40-2"></a></h2>
+
+<h2 id="artifact-release-testing-is-inherently-limited-a-id-sec-1-40-3-name-sec-1-40-3-a">Artifact release testing is inherently limited<a id="sec-1-40-3" name="sec-1-40-3"></a></h2>
+
+<h2 id="we-could-be-reifying-artifact-sets-at-a-macro-e-g-app-or-multi-app-level-a-id-sec-1-40-4-name-sec-1-40-4-a">We could be reifying artifact sets at a macro (e.g. app or multi-app) level<a id="sec-1-40-4" name="sec-1-40-4"></a></h2>
+
+<h1 id="1-03-47-live-coding-demo-a-id-sec-1-41-name-sec-1-41-a">1:03:47 (Live Coding Demo)<a id="sec-1-41" name="sec-1-41"></a></h1>
+
+<h1 id="1-04-00-what-about-web-services-a-id-sec-1-42-name-sec-1-42-a">1:04:00 What about Web Services?<a id="sec-1-42" name="sec-1-42"></a></h1>
+
+<h2 id="same-problems-same-mistakes-a-id-sec-1-42-1-name-sec-1-42-1-a">Same problems, same mistakes<a id="sec-1-42-1" name="sec-1-42-1"></a></h2>
+
+<ol>
+<li><p>&lsquo;versioning&rsquo; non-answer</p></li>
+
+<li><p>conflating collections w/contents</p></li>
+</ol>
+
+<h2 id="web-service-is-collection-of-ops-a-id-sec-1-42-2-name-sec-1-42-2-a">Web service is collection of ops<a id="sec-1-42-2" name="sec-1-42-2"></a></h2>
+
+<h2 id="ops-require-provide-a-id-sec-1-42-3-name-sec-1-42-3-a">ops require/provide<a id="sec-1-42-3" name="sec-1-42-3"></a></h2>
+
+<h2 id="accretion-could-prevent-a-lot-of-client-service-version-hell-a-id-sec-1-42-4-name-sec-1-42-4-a">Accretion could prevent a lot of client/service version hell<a id="sec-1-42-4" name="sec-1-42-4"></a></h2>
+
+<h1 id="1-07-04-we-need-to-bring-fp-to-the-library-ecosystem-a-id-sec-1-43-name-sec-1-43-a">1:07:04 We Need to Bring FP to the Library Ecosystem<a id="sec-1-43" name="sec-1-43"></a></h1>
+
+<h2 id="currently-update-in-place-excused-but-not-corrected-by-versioning-a-id-sec-1-43-1-name-sec-1-43-1-a">Currently update-in-place, excused but not corrected by versioning<a id="sec-1-43-1" name="sec-1-43-1"></a></h2>
+
+<ol>
+<li>dependency hell == mutability hell</li>
+</ol>
+
+<h2 id="makes-programming-fragile-a-id-sec-1-43-2-name-sec-1-43-2-a">Makes programming fragile<a id="sec-1-43-2" name="sec-1-43-2"></a></h2>
+
+<h2 id="libraries-less-useful-a-id-sec-1-43-3-name-sec-1-43-3-a">Libraries less useful<a id="sec-1-43-3" name="sec-1-43-3"></a></h2>
+
+<ol>
+<li>Even undesirable, whatever their features</li>
+</ol>
+
+<h1 id="1-08-19-this-is-impossible-impractical-a-id-sec-1-44-name-sec-1-44-a">1:08:19 &ldquo;This is Impossible/Impractical&rdquo;<a id="sec-1-44" name="sec-1-44"></a></h1>
+
+<h2 id="nope-a-id-sec-1-44-1-name-sec-1-44-1-a">Nope<a id="sec-1-44-1" name="sec-1-44-1"></a></h2>
+
+<h2 id="many-examples-of-decade-compatibility-a-id-sec-1-44-2-name-sec-1-44-2-a">Many examples of decade+ compatibility<a id="sec-1-44-2" name="sec-1-44-2"></a></h2>
+
+<ol>
+<li><p>Unix APIs</p></li>
+
+<li><p>Java</p></li>
+
+<li><p>HTML</p></li>
+
+<li><p>Clojure?</p></li>
+</ol>
+
+<h2 id="compatibility-a-prerequisite-of-success-a-id-sec-1-44-3-name-sec-1-44-3-a">Compatibility a prerequisite of success?<a id="sec-1-44-3" name="sec-1-44-3"></a></h2>
+
+<h1 id="1-09-47-what-if-we-never-broke-anything-a-id-sec-1-45-name-sec-1-45-a">1:09:47 What If We Never Broke Anything?<a id="sec-1-45" name="sec-1-45"></a></h1>
+
+<h2 id="names-become-enduringly-meaningful-a-id-sec-1-45-1-name-sec-1-45-1-a">names become enduringly meaningful<a id="sec-1-45-1" name="sec-1-45-1"></a></h2>
+
+<h2 id="orthogonal-compatibility-checking-becomes-possible-a-id-sec-1-45-2-name-sec-1-45-2-a">orthogonal compatibility checking becomes possible<a id="sec-1-45-2" name="sec-1-45-2"></a></h2>
+
+<h2 id="find-grained-deps-can-be-explored-a-id-sec-1-45-3-name-sec-1-45-3-a">find-grained deps can be explored<a id="sec-1-45-3" name="sec-1-45-3"></a></h2>
+
+<h2 id="use-the-latest-with-impunity-a-id-sec-1-45-4-name-sec-1-45-4-a">use the latest with impunity<a id="sec-1-45-4" name="sec-1-45-4"></a></h2>
+
+<h2 id="compose-with-impunity-a-id-sec-1-45-5-name-sec-1-45-5-a">compose with impunity<a id="sec-1-45-5" name="sec-1-45-5"></a></h2>
+
+<h1 id="1-10-54-open-challenges-a-id-sec-1-46-name-sec-1-46-a">1:10:54 Open Challenges<a id="sec-1-46" name="sec-1-46"></a></h1>
+
+<h2 id="we-can-t-see-some-changes-a-id-sec-1-46-1-name-sec-1-46-1-a">We can&rsquo;t &lsquo;see&rsquo; some changes<a id="sec-1-46-1" name="sec-1-46-1"></a></h2>
+
+<ol>
+<li><p>collection adds are easy</p></li>
+
+<li><p>fn args/ret not visible in source</p>
+
+<ol>
+<li>specs can help</li>
+</ol></li>
+</ol>
+
+<h2 id="spec-compatibility-context-dependent-a-id-sec-1-46-2-name-sec-1-46-2-a">spec compatibility context-dependent<a id="sec-1-46-2" name="sec-1-46-2"></a></h2>
+
+<ol>
+<li>provide vs require</li>
+</ol>
+
+<h2 id="repo-artifact-namespaces-not-first-class-a-id-sec-1-46-3-name-sec-1-46-3-a">repo-&gt;artifact-&gt;namespaces not first class<a id="sec-1-46-3" name="sec-1-46-3"></a></h2>
+
+<h2 id="tooling-that-reinforces-the-status-quo-a-id-sec-1-46-4-name-sec-1-46-4-a">tooling that reinforces the status quo<a id="sec-1-46-4" name="sec-1-46-4"></a></h2>
+
+<h1 id="1-12-40-opportunities-for-clojure-a-id-sec-1-47-name-sec-1-47-a">1:12:40 Opportunities for Clojure<a id="sec-1-47" name="sec-1-47"></a></h1>
+
+<h2 id="spec-a-id-sec-1-47-1-name-sec-1-47-1-a">spec<a id="sec-1-47-1" name="sec-1-47-1"></a></h2>
+
+<h2 id="flexible-vs-fragile-brittle-dep-awareness-a-id-sec-1-47-2-name-sec-1-47-2-a">Flexible (vs fragile/brittle) dep awareness<a id="sec-1-47-2" name="sec-1-47-2"></a></h2>
+
+<h2 id="explicit-code-artifact-repo-support-a-id-sec-1-47-3-name-sec-1-47-3-a">Explicit code-&gt;artifact/repo support<a id="sec-1-47-3" name="sec-1-47-3"></a></h2>
+
+<h2 id="first-class-fine-grained-publish-for-apis-a-id-sec-1-47-4-name-sec-1-47-4-a">First-class, fine-grained &lsquo;publish&rsquo; for APIs<a id="sec-1-47-4" name="sec-1-47-4"></a></h2>
+
+<ol>
+<li>ditto deprecation</li>
+</ol>
+
+<h2 id="testing-based-on-fine-grained-deps-a-id-sec-1-47-5-name-sec-1-47-5-a">Testing based on fine-grained deps<a id="sec-1-47-5" name="sec-1-47-5"></a></h2>
+
+<ol>
+<li>generative testing needs this</li>
+</ol>
+
+<h1 id="1-14-23-exchange-change-a-id-sec-1-48-name-sec-1-48-a">1:14:23 Exchange &gt; Change<a id="sec-1-48" name="sec-1-48"></a></h1>
+
+<h2 id="grow-your-software-a-id-sec-1-48-1-name-sec-1-48-1-a">Grow your software<a id="sec-1-48-1" name="sec-1-48-1"></a></h2>
+
+<h2 id="give-birth-to-variation-a-id-sec-1-48-2-name-sec-1-48-2-a">Give birth to variation<a id="sec-1-48-2" name="sec-1-48-2"></a></h2>
+
+<ol>
+<li>Don&rsquo;t break, accrete</li>
+</ol>
+
+<h2 id="think-of-the-children-consumers-a-id-sec-1-48-3-name-sec-1-48-3-a">Think of the -children- consumers<a id="sec-1-48-3" name="sec-1-48-3"></a></h2>
+
+<h2 id="move-forward-without-burning-bridges-a-id-sec-1-48-4-name-sec-1-48-4-a">Move forward without burning bridges<a id="sec-1-48-4" name="sec-1-48-4"></a></h2>
+
+<h2 id="create-a-lib-service-ecosystem-of-which-we-can-all-be-proud-a-id-sec-1-48-5-name-sec-1-48-5-a">Create a lib/service ecosystem of which we can all be proud<a id="sec-1-48-5" name="sec-1-48-5"></a></h2>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+    
+
+    
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://beppu.github.io/post/why-i-chose-hugo/"
+                class="button big previous">Why I Chose Hugo</a></li>
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'beppu';
+    var disqus_identifier = 'http:\/\/beppu.github.io\/post\/spec-ulation\/';
+    var disqus_title = 'Spec-ulation';
+    var disqus_url = 'http:\/\/beppu.github.io\/post\/spec-ulation\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Beppu&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>Beppu&#39;s Blog</h2>
+                    <p>My thoughts on technology.</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://beppu.github.io/post/spec-ulation/">Spec-ulation</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-12-10'>
+                                    December 10, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://beppu.github.io/post/why-i-chose-hugo/">Why I Chose Hugo</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-10-19'>
+                                    October 19, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /post/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/frameworks/">frameworks</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hugo/">hugo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/libraries/">libraries</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>I&#39;m currently taking a break from work to study things.</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Beppu&#39;s Blog. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <script src="/js/main.min.js"></script>
+                
+            
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+
