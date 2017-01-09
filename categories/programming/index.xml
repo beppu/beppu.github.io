@@ -205,8 +205,10 @@ left corner.  This lets you switch to windows in O(1) time.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;SPC t n&lt;/code&gt; - Toggle line numbers.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;,&lt;/code&gt; - The comma is a shortcut for &lt;code&gt;SPC m&lt;/code&gt; which is where all the major mode bindings are.  Depending on what major mode you&amp;rsquo;re
-in, you may get a completely different set of commands under &lt;code&gt;SPC m&lt;/code&gt;.  However, a lot of useful functionality is organized under &lt;code&gt;SPC m&lt;/code&gt;, so &lt;code&gt;,&lt;/code&gt; gets you there with one fewer keystroke.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,&lt;/code&gt; - The comma is a shortcut for &lt;code&gt;SPC m&lt;/code&gt; which is where all the major mode
+bindings are. Depending on what major mode you&amp;rsquo;re in, you may get a completely
+different set of commands under &lt;code&gt;SPC m&lt;/code&gt;. A lot of useful functionality is
+organized under &lt;code&gt;SPC m&lt;/code&gt;, so &lt;code&gt;,&lt;/code&gt; gets you there with one fewer keystroke.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;SPC SPC&lt;/code&gt; - This is a shortcut for &lt;code&gt;M-x&lt;/code&gt;.  In classic Emacs, &lt;code&gt;M-x&lt;/code&gt; was your gateway to all kinds of emacs functions, and there
 are many functions that are only reachable through this, so it&amp;rsquo;s good to know.&lt;/p&gt;
