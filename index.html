@@ -341,11 +341,11 @@ one of the big complaints many people have about Emacs &ndash; the keybindings. 
 classical Emacs keybindings can be hell on your fingers and wrists, and they can be hard to
 memorize too.</p>
 
-<p>The <code>SPC</code> menu, on the other hand, is very easy to type, and the mnemonics that have been
+<p>Commands in the <code>SPC</code> menu, on the other hand, is very easy to type, and the mnemonics that have been
 picked are a lot more intuitive.  The way it works is while you&rsquo;re in command mode in a buffer,
 hit <code>SPC</code> and a menu will appear.  Each character leads to either a submenu or a command.  This
 presents you with a hierarchical tree of commands that can be explored and learned as you use
-the Spacemacs.</p>
+Spacemacs.</p>
 
 <p>The more you use it, the more you may come to appreciate its genius as I have.</p>
 
@@ -357,11 +357,16 @@ not essential knowledge at this time.</p>
 <p><strong>Packages</strong> - Emacs has a packaging system, and traditionally, you&rsquo;d install them by
 typing <code>M-x package-install</code>, but that&rsquo;s <strong>NOT</strong> how you do things in Spacemacs.</p>
 
-<p><strong>Layers</strong> - Spacemacs has something called layers, and this is where you want
-to look first for extra functionality. A layer takes a package (or a set of
-packages) and adapts them to the Spacemacs way which usually means adding
-entries to the <code>SPC</code> menu and setting a few variables. Layers are usually small,
-and you can find a list of them by typing <code>SPC h SPC</code>.</p>
+<ol>
+<li>In Spacemacs, package installation is defined by the ~/.spacemacs
+configuration file which is described in the next section.</li>
+<li>In Spacemacs, layers should be favored over packages.</li>
+</ol>
+
+<p><strong>Layers</strong> - A layer takes a package (or a set of packages) and adapts them to
+the Spacemacs way which usually means adding entries to the <code>SPC</code> menu and
+setting a few variables. Layers are usually small, and you can find a list of
+them by typing <code>SPC h SPC</code>.</p>
 
 <p>A complete list is also available at:</p>
 
@@ -380,9 +385,15 @@ typing:</p>
 <p>Although this is a big file, most of your time will be spent with these 3 symbols:</p>
 
 <ol>
-<li><strong>dotspacemacs-configuration-layers</strong> - This is a list of layers you want to use.  To install a new layer, add it to the list and restart emacs.</li>
-<li><strong>dotspacemacs-additional-packages</strong> - This is a list of extra packages you want.  If you need a package that hasn&rsquo;t had a layer made for it yet, this is where you add it.</li>
-<li><strong>dotspacemacs/user-config</strong> - This is a function that is run during Spacemacs startup.  If you need to set some variables (such as indentation settings) this is where you&rsquo;d do it.</li>
+<li><strong>dotspacemacs-configuration-layers</strong> - This is a list of layers you want to
+use. To install a new layer, add it to the list and restart emacs.</li>
+<li><strong>dotspacemacs-additional-packages</strong> - This is a list of extra packages you
+want. If you need a package that hasn&rsquo;t had a layer made for it yet, this is
+where you add it.</li>
+<li><strong>dotspacemacs/user-config</strong> - This is a function that is run during
+Spacemacs startup. Any configuration that doesn&rsquo;t already have a spacemacs
+variable as well as any custom code goes here. For example, if you need to
+set some variables (such as indentation settings) this is where you&rsquo;d do it.</li>
 </ol>
 
 <p><code>SPC q R</code> - This is a handy way to restart emacs.</p>
@@ -393,7 +404,15 @@ typing:</p>
 
 <p><code>SPC w /</code> - Split window vertically.  (<code>C-w v</code> in vim)</p>
 
+<p><code>SPC w v</code> - Also split window vertically.</p>
+
+<p><code>SPC w V</code> - Split window vertically and focus new window.</p>
+
 <p><code>SPC w -</code> - Split window horizontally. (<code>C-w s</code> in vim)</p>
+
+<p><code>SPC w s</code> - Also split window horizontally.</p>
+
+<p><code>SPC w S</code> - Split window horizontally and focus new window.</p>
 
 <p><code>SPC 1</code>, <code>SPC 2</code>, &hellip; <code>SPC 9</code> - Switch to window N.  Notice that each window has a little number in the bottom
 left corner.  This lets you switch to windows in O(1) time.</p>
@@ -426,7 +445,7 @@ left corner.  This lets you switch to windows in O(1) time.</p>
 
 <h1 id="miscellaneous">Miscellaneous</h1>
 
-<p><code>SPC T s</code> - Switch themes.  (Add the <strong>themes-megapack</strong> layer to get a big selection.)</p>
+<p><code>SPC T s</code> - Switch themes.  (Add the <strong><a href="http://themegallery.robdor.com/">themes-megapack</a></strong> layer to get a big selection.)</p>
 
 <p><code>SPC T T</code> - Toggle transparency.</p>
 
@@ -437,11 +456,10 @@ left corner.  This lets you switch to windows in O(1) time.</p>
 <p><code>,</code> - The comma is a shortcut for <code>SPC m</code> which is where all the major mode bindings are.  Depending on what major mode you&rsquo;re
 in, you may get a completely different set of commands under <code>SPC m</code>.  However, a lot of useful functionality is organized under <code>SPC m</code>, so <code>,</code> gets you there with one fewer keystroke.</p>
 
-<p><code>SPC :</code> - This is a shortcut for <code>M-x</code>.  In classic Emacs, <code>M-x</code> was your gateway to all kinds of emacs functions, and there
+<p><code>SPC SPC</code> - This is a shortcut for <code>M-x</code>.  In classic Emacs, <code>M-x</code> was your gateway to all kinds of emacs functions, and there
 are many functions that are only reachable through this, so it&rsquo;s good to know.</p>
 
-<p>Note that in older version of Spacemacs, it was <code>SPC SPC</code> which was easier to type, but I think they decided to establish
-a parallel between Vim&rsquo;s <code>:</code> and Spacemacs&rsquo; <code>SPC :</code>.</p>
+<p>Note that some versions of Spacemacs, this was mapped to <code>SPC :</code>.</p>
 
 <p><code>C-g</code> - Abort!  If you find yourself in a funky state, Control-G can usually get you out of it.</p>
 

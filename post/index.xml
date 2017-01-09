@@ -94,11 +94,11 @@ one of the big complaints many people have about Emacs &amp;ndash; the keybindin
 classical Emacs keybindings can be hell on your fingers and wrists, and they can be hard to
 memorize too.&lt;/p&gt;
 
-&lt;p&gt;The &lt;code&gt;SPC&lt;/code&gt; menu, on the other hand, is very easy to type, and the mnemonics that have been
+&lt;p&gt;Commands in the &lt;code&gt;SPC&lt;/code&gt; menu, on the other hand, is very easy to type, and the mnemonics that have been
 picked are a lot more intuitive.  The way it works is while you&amp;rsquo;re in command mode in a buffer,
 hit &lt;code&gt;SPC&lt;/code&gt; and a menu will appear.  Each character leads to either a submenu or a command.  This
 presents you with a hierarchical tree of commands that can be explored and learned as you use
-the Spacemacs.&lt;/p&gt;
+Spacemacs.&lt;/p&gt;
 
 &lt;p&gt;The more you use it, the more you may come to appreciate its genius as I have.&lt;/p&gt;
 
@@ -110,11 +110,16 @@ not essential knowledge at this time.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Packages&lt;/strong&gt; - Emacs has a packaging system, and traditionally, you&amp;rsquo;d install them by
 typing &lt;code&gt;M-x package-install&lt;/code&gt;, but that&amp;rsquo;s &lt;strong&gt;NOT&lt;/strong&gt; how you do things in Spacemacs.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Layers&lt;/strong&gt; - Spacemacs has something called layers, and this is where you want
-to look first for extra functionality. A layer takes a package (or a set of
-packages) and adapts them to the Spacemacs way which usually means adding
-entries to the &lt;code&gt;SPC&lt;/code&gt; menu and setting a few variables. Layers are usually small,
-and you can find a list of them by typing &lt;code&gt;SPC h SPC&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In Spacemacs, package installation is defined by the ~/.spacemacs
+configuration file which is described in the next section.&lt;/li&gt;
+&lt;li&gt;In Spacemacs, layers should be favored over packages.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Layers&lt;/strong&gt; - A layer takes a package (or a set of packages) and adapts them to
+the Spacemacs way which usually means adding entries to the &lt;code&gt;SPC&lt;/code&gt; menu and
+setting a few variables. Layers are usually small, and you can find a list of
+them by typing &lt;code&gt;SPC h SPC&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;A complete list is also available at:&lt;/p&gt;
 
@@ -133,9 +138,15 @@ typing:&lt;/p&gt;
 &lt;p&gt;Although this is a big file, most of your time will be spent with these 3 symbols:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;dotspacemacs-configuration-layers&lt;/strong&gt; - This is a list of layers you want to use.  To install a new layer, add it to the list and restart emacs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;dotspacemacs-additional-packages&lt;/strong&gt; - This is a list of extra packages you want.  If you need a package that hasn&amp;rsquo;t had a layer made for it yet, this is where you add it.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;dotspacemacs/user-config&lt;/strong&gt; - This is a function that is run during Spacemacs startup.  If you need to set some variables (such as indentation settings) this is where you&amp;rsquo;d do it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs-configuration-layers&lt;/strong&gt; - This is a list of layers you want to
+use. To install a new layer, add it to the list and restart emacs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs-additional-packages&lt;/strong&gt; - This is a list of extra packages you
+want. If you need a package that hasn&amp;rsquo;t had a layer made for it yet, this is
+where you add it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs/user-config&lt;/strong&gt; - This is a function that is run during
+Spacemacs startup. Any configuration that doesn&amp;rsquo;t already have a spacemacs
+variable as well as any custom code goes here. For example, if you need to
+set some variables (such as indentation settings) this is where you&amp;rsquo;d do it.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;code&gt;SPC q R&lt;/code&gt; - This is a handy way to restart emacs.&lt;/p&gt;
@@ -146,7 +157,15 @@ typing:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;SPC w /&lt;/code&gt; - Split window vertically.  (&lt;code&gt;C-w v&lt;/code&gt; in vim)&lt;/p&gt;
 
+&lt;p&gt;&lt;code&gt;SPC w v&lt;/code&gt; - Also split window vertically.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC w V&lt;/code&gt; - Split window vertically and focus new window.&lt;/p&gt;
+
 &lt;p&gt;&lt;code&gt;SPC w -&lt;/code&gt; - Split window horizontally. (&lt;code&gt;C-w s&lt;/code&gt; in vim)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC w s&lt;/code&gt; - Also split window horizontally.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC w S&lt;/code&gt; - Split window horizontally and focus new window.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;SPC 1&lt;/code&gt;, &lt;code&gt;SPC 2&lt;/code&gt;, &amp;hellip; &lt;code&gt;SPC 9&lt;/code&gt; - Switch to window N.  Notice that each window has a little number in the bottom
 left corner.  This lets you switch to windows in O(1) time.&lt;/p&gt;
@@ -179,7 +198,7 @@ left corner.  This lets you switch to windows in O(1) time.&lt;/p&gt;
 
 &lt;h1 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h1&gt;
 
-&lt;p&gt;&lt;code&gt;SPC T s&lt;/code&gt; - Switch themes.  (Add the &lt;strong&gt;themes-megapack&lt;/strong&gt; layer to get a big selection.)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SPC T s&lt;/code&gt; - Switch themes.  (Add the &lt;strong&gt;&lt;a href=&#34;http://themegallery.robdor.com/&#34;&gt;themes-megapack&lt;/a&gt;&lt;/strong&gt; layer to get a big selection.)&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;SPC T T&lt;/code&gt; - Toggle transparency.&lt;/p&gt;
 
@@ -190,11 +209,10 @@ left corner.  This lets you switch to windows in O(1) time.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;,&lt;/code&gt; - The comma is a shortcut for &lt;code&gt;SPC m&lt;/code&gt; which is where all the major mode bindings are.  Depending on what major mode you&amp;rsquo;re
 in, you may get a completely different set of commands under &lt;code&gt;SPC m&lt;/code&gt;.  However, a lot of useful functionality is organized under &lt;code&gt;SPC m&lt;/code&gt;, so &lt;code&gt;,&lt;/code&gt; gets you there with one fewer keystroke.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;SPC :&lt;/code&gt; - This is a shortcut for &lt;code&gt;M-x&lt;/code&gt;.  In classic Emacs, &lt;code&gt;M-x&lt;/code&gt; was your gateway to all kinds of emacs functions, and there
+&lt;p&gt;&lt;code&gt;SPC SPC&lt;/code&gt; - This is a shortcut for &lt;code&gt;M-x&lt;/code&gt;.  In classic Emacs, &lt;code&gt;M-x&lt;/code&gt; was your gateway to all kinds of emacs functions, and there
 are many functions that are only reachable through this, so it&amp;rsquo;s good to know.&lt;/p&gt;
 
-&lt;p&gt;Note that in older version of Spacemacs, it was &lt;code&gt;SPC SPC&lt;/code&gt; which was easier to type, but I think they decided to establish
-a parallel between Vim&amp;rsquo;s &lt;code&gt;:&lt;/code&gt; and Spacemacs&amp;rsquo; &lt;code&gt;SPC :&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note that some versions of Spacemacs, this was mapped to &lt;code&gt;SPC :&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;C-g&lt;/code&gt; - Abort!  If you find yourself in a funky state, Control-G can usually get you out of it.&lt;/p&gt;
 
