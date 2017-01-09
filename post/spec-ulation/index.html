@@ -55,11 +55,11 @@
 
 
 <meta itemprop="dateModified" content="2016-12-10T18:47:59-08:00" />
-<meta itemprop="wordCount" content="1254">
+<meta itemprop="wordCount" content="1398">
 
 
 
-<meta itemprop="keywords" content="frameworks,hugo,libraries," />
+<meta itemprop="keywords" content="clojure,editors,frameworks,hugo,libraries,presentation,programming," />
 
         
 
@@ -185,11 +185,11 @@
 
                 
                     <li>
-                        <a href="http://beppu.github.io/post/spec-ulation/"><p>Spec-ulation</p></a>
+                        <a href="http://beppu.github.io/post/spacemacs-tips/"><p>Spacemacs Tips</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://beppu.github.io/post/why-i-chose-hugo/"><p>Why I Chose Hugo</p></a>
+                        <a href="http://beppu.github.io/post/spec-ulation/"><p>Spec-ulation</p></a>
                     </li>
                 
             </ul>
@@ -278,7 +278,7 @@
             December 10, 2016</time>
         <span class="author">beppu</span>
         
-            <p>6 minute read</p>
+            <p>7 minute read</p>
         
         
     </div>
@@ -346,20 +346,33 @@
 
 <p><a href="https://www.youtube.com/watch?v=oyLBGkS5ICk">https://www.youtube.com/watch?v=oyLBGkS5ICk</a></p>
 
-<style>
-#content h1 {
-  margin-top: 1em;
-  border-top: 1px solid #888;
-}
-
-#content h2 {
-  font-size: 13px;
-}
-</style>
-
 <h1 id="tl-dw">tl;dw</h1>
 
-<p>Coming soon&hellip;</p>
+<p>When Rich Hickey speaks, it&rsquo;s a good idea to listen. He is able to see things
+that many of the rest of us cannot, and he is able to analyze and explain his
+thoughts with a precision that is rare even among programmers.</p>
+
+<p>Little did I know that there was a problem with semantic versioning. It seemed
+like a reasonable system, and I never gave it a second thought until I watched
+this presentation where Rich exposed what the semantics of this system actually
+were.</p>
+
+<h2 id="briefly-the-semantics-of-x-y-z">Briefly, the semantics of x.y.z</h2>
+
+<ul>
+<li>z changes - don&rsquo;t care.</li>
+<li>y changes - don&rsquo;t care.</li>
+<li>x changes - you&rsquo;re screwed.</li>
+</ul>
+
+<p>That&rsquo;s all this system can tell you.</p>
+
+<p>Furthermore, this system implicitly formalizes software breakage by saying if
+you change <strong>x</strong>, you&rsquo;re allowed to make backward incompatible changes.</p>
+
+<p>However, do we have to break our software?</p>
+
+<p>Rich points us toward another way.</p>
 
 <h1 id="0-00-spec-ulation-a-id-sec-1-2-name-sec-1-2-a">0:00 Spec-ulation<a id="sec-1-2" name="sec-1-2"></a></h1>
 
@@ -923,6 +936,17 @@ Right.</p>
 
 <h2 id="create-a-lib-service-ecosystem-of-which-we-can-all-be-proud-a-id-sec-1-48-5-name-sec-1-48-5-a">Create a lib/service ecosystem of which we can all be proud<a id="sec-1-48-5" name="sec-1-48-5"></a></h2>
 
+<style>
+#content h1 {
+  margin-top: 1em;
+  border-top: 1px solid #888;
+}
+
+#content h2 {
+  font-size: 13px;
+}
+</style>
+
     </div>
 
     <footer>
@@ -932,9 +956,30 @@ Right.</p>
 
         
         
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
     
 
     
+    
+        <li><a href='/categoriesprogramming'>programming</a></li>
+    
+        <li><a href='/categoriesclojure'>clojure</a></li>
+    
+        <li><a href='/categoriespresentation'>presentation</a></li>
     
 </ul>
 
@@ -946,6 +991,9 @@ Right.</p>
                 class="button big previous">Why I Chose Hugo</a></li>
     
 
+    
+        <li><a href="http://beppu.github.io/post/spacemacs-tips/"
+                class="button big next">Spacemacs Tips</a></li>
     
 </ul>
 
@@ -1071,13 +1119,13 @@ Right.</p>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://beppu.github.io/post/spec-ulation/">Spec-ulation</a></h3>
+                                <h3><a href="http://beppu.github.io/post/spacemacs-tips/">Spacemacs Tips</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2016-12-10'>
-                                    December 10, 2016</time>
+                                    '2017-01-06'>
+                                    January 6, 2017</time>
                             </header>
                         </article>
                     </li>
@@ -1085,13 +1133,13 @@ Right.</p>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://beppu.github.io/post/why-i-chose-hugo/">Why I Chose Hugo</a></h3>
+                                <h3><a href="http://beppu.github.io/post/spec-ulation/">Spec-ulation</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2016-10-19'>
-                                    October 19, 2016</time>
+                                    '2016-12-10'>
+                                    December 10, 2016</time>
                             </header>
                         </article>
                     </li>
@@ -1129,6 +1177,33 @@ Right.</p>
                     <li>
                         <article>
                             <header>
+                                <a href="/categories/programming/">programming</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/clojure/">clojure</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/editors/">editors</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <a href="/categories/frameworks/">frameworks</a>
                                 <span style="float:right;">1</span>
                             </header>
@@ -1148,6 +1223,15 @@ Right.</p>
                         <article>
                             <header>
                                 <a href="/categories/libraries/">libraries</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/presentation/">presentation</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
