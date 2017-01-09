@@ -193,10 +193,10 @@ in, you may get a completely different set of commands under &lt;code&gt;SPC m&l
 &lt;p&gt;&lt;code&gt;SPC :&lt;/code&gt; - This is a shortcut for &lt;code&gt;M-x&lt;/code&gt;.  In classic Emacs, &lt;code&gt;M-x&lt;/code&gt; was your gateway to all kinds of emacs functions, and there
 are many functions that are only reachable through this, so it&amp;rsquo;s good to know.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;C-g&lt;/code&gt; - Abort!  If you find yourself in a funky state, Control-G can usually get you out of it.&lt;/p&gt;
-
 &lt;p&gt;Note that in older version of Spacemacs, it was &lt;code&gt;SPC SPC&lt;/code&gt; which was easier to type, but I think they decided to establish
 a parallel between Vim&amp;rsquo;s &lt;code&gt;:&lt;/code&gt; and Spacemacs&amp;rsquo; &lt;code&gt;SPC :&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C-g&lt;/code&gt; - Abort!  If you find yourself in a funky state, Control-G can usually get you out of it.&lt;/p&gt;
 
 &lt;h1 id=&#34;enjoy-spacemacs&#34;&gt;Enjoy Spacemacs&lt;/h1&gt;
 
