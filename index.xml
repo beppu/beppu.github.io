@@ -6,8 +6,203 @@
     <description>Recent content on Beppu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Dec 2016 18:47:59 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jan 2017 15:17:23 -0800</lastBuildDate>
     <atom:link href="http://beppu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Spacemacs Tips</title>
+      <link>http://beppu.github.io/post/spacemacs-tips/</link>
+      <pubDate>Fri, 06 Jan 2017 15:17:23 -0800</pubDate>
+      
+      <guid>http://beppu.github.io/post/spacemacs-tips/</guid>
+      <description>
+
+
+
+
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+
+    
+    
+        
+    
+
+
+    
+
+    
+        &lt;p&gt;&lt;span class=&#34;image center-image&#34;&gt;
+            &lt;img src=&#34;http://beppu.github.io/img/spacemacs-tips/spacemacs-logo.svg&#34; alt=&#34;Spacemacs&#34; /&gt;
+        &lt;/span&gt;&lt;/p&gt;
+    
+
+
+
+&lt;p&gt;&lt;a href=&#34;http://spacemacs.org/&#34;&gt;Spacemacs&lt;/a&gt; is a radical reconfiguration of Emacs that tries to bring the good parts of
+vi and emacs together while also adding some good ideas of its own.  A few months ago
+I gave it a try, and the longer I use it, the more impressed I become with how well
+this curated Emacs system comes together.&lt;/p&gt;
+
+&lt;p&gt;With that said, there are a few things that were not immediately obvious to me that I
+wish I had known sooner.&lt;/p&gt;
+
+&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Leave the Editor Running&lt;/strong&gt; - If you&amp;rsquo;re new to Emacs, and especially if you previously
+used an editor that starts up quickly like Vim, this will probably be one of the hardest
+habits to break.  Emacs doesn&amp;rsquo;t start up instantaneously, so the common wisdom among Emacs
+users is to start it up and leave it running for a long time while you edit various files.&lt;/p&gt;
+
+&lt;p&gt;One thing that may help ease the pain is to create the following alias.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;alias e=&#39;emacsclient --no-wait&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Spacemacs automatically puts Emacs in &lt;code&gt;server-mode&lt;/code&gt; which lets &lt;code&gt;emacsclient&lt;/code&gt; tell &lt;code&gt;emacs&lt;/code&gt;
+to edit files.  If you were in the terminal and came across a file you&amp;rsquo;d want to edit,
+you could type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;e some-file.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Classical Emacs Bindings&lt;/strong&gt; - If you&amp;rsquo;ve used Emacs before and are used to its traditional
+keybindings, don&amp;rsquo;t worry.  They&amp;rsquo;re mostly all there.  However, to get the most out of Spacemacs,
+you should gradually learn to do things the Spacemacs way, and that means using the &lt;code&gt;SPC&lt;/code&gt; menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Space Menu&lt;/strong&gt; - This is one of the most ingenious parts of Spacemacs, and it eliminates
+one of the big complaints many people have about Emacs &amp;ndash; the keybindings.  I&amp;rsquo;m sorry, but
+classical Emacs keybindings can be hell on your fingers and wrists, and they can be hard to
+memorize too.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;SPC&lt;/code&gt; menu, on the other hand, is very easy to type, and the mnemonics that have been
+picked are a lot more intuitive.  The way it works is while you&amp;rsquo;re in command mode in a buffer,
+hit &lt;code&gt;SPC&lt;/code&gt; and a menu will appear.  Each character leads to either a submenu or a command.  This
+presents you with a hierarchical tree of commands that can be explored and learned as you use
+the Spacemacs.&lt;/p&gt;
+
+&lt;p&gt;The more you use it, the more you may come to appreciate its genius as I have.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Major Mode vs Minor Mode&lt;/strong&gt; - In Emacs terminology, a buffer may have one major mode and many
+minor modes activated.  A mode usually defines keybindings and special behaviors such as automatic
+indentation for programming languages.  I don&amp;rsquo;t know what makes a mode major versus minor, but it&amp;rsquo;s
+not essential knowledge at this time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Packages&lt;/strong&gt; - Emacs has a packaging system, and traditionally, you&amp;rsquo;d install them by
+typing &lt;code&gt;M-x package-install&lt;/code&gt;, but that&amp;rsquo;s &lt;strong&gt;NOT&lt;/strong&gt; how you do things in Spacemacs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Layers&lt;/strong&gt; - Spacemacs has something called layers, and this is where you want
+to look first for extra functionality. A layer takes a package (or a set of
+packages) and adapts them to the Spacemacs way which usually means adding
+entries to the &lt;code&gt;SPC&lt;/code&gt; menu and setting a few variables. Layers are usually small,
+and you can find a list of them by typing &lt;code&gt;SPC h SPC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A complete list is also available at:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/syl20bnr/spacemacs/tree/master/layers&#34;&gt;https://github.com/syl20bnr/spacemacs/tree/master/layers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://spacemacs.org/layers/LAYERS.html&#34;&gt;http://spacemacs.org/layers/LAYERS.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;configuration&#34;&gt;Configuration&lt;/h1&gt;
+
+&lt;p&gt;To add a layer to your Spacemacs configuration, you edit your &lt;code&gt;~/.spacemacs&lt;/code&gt; file, and you do that by
+typing:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC f e d&lt;/code&gt; - edit ~/.spacemacs file&lt;/p&gt;
+
+&lt;p&gt;Although this is a big file, most of your time will be spent with these 3 symbols:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs-configuration-layers&lt;/strong&gt; - This is a list of layers you want to use.  To install a new layer, add it to the list and restart emacs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs-additional-packages&lt;/strong&gt; - This is a list of extra packages you want.  If you need a package that hasn&amp;rsquo;t had a layer made for it yet, this is where you add it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dotspacemacs/user-config&lt;/strong&gt; - This is a function that is run during Spacemacs startup.  If you need to set some variables (such as indentation settings) this is where you&amp;rsquo;d do it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;SPC q R&lt;/code&gt; - This is a handy way to restart emacs.&lt;/p&gt;
+
+&lt;h1 id=&#34;navigation&#34;&gt;Navigation&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Window Management&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC w /&lt;/code&gt; - Split window vertically.  (&lt;code&gt;C-w v&lt;/code&gt; in vim)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC w -&lt;/code&gt; - Split window horizontally. (&lt;code&gt;C-w s&lt;/code&gt; in vim)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC 1&lt;/code&gt;, &lt;code&gt;SPC 2&lt;/code&gt;, &amp;hellip; &lt;code&gt;SPC 9&lt;/code&gt; - Switch to window N.  Notice that each window has a little number in the bottom
+left corner.  This lets you switch to windows in O(1) time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;File Management&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC f t&lt;/code&gt; - Toggle neotree.  This is very similar to vim&amp;rsquo;s NERDTree, and Spacemacs favors neotree over the traditional speedbar for file navigation.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC 0&lt;/code&gt; - Switch to the neotree window.  Window 0 is specially reserved just for neotree.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC p f&lt;/code&gt; - Open file via projectile.  This is nice if you&amp;rsquo;re working on a project, because it lets you complete a filename within the project you&amp;rsquo;re in, and it seems to know what files to ignore.  For example, if you were in a node.js project, it knows to ignore &lt;strong&gt;node_modules/&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC f f&lt;/code&gt; - Open file.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC b b&lt;/code&gt; - Switch to buffer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC b d&lt;/code&gt; - Delete buffer.  (&lt;code&gt;:bd&lt;/code&gt; in vim)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC j i&lt;/code&gt; - Go to imenu location in current buffer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC j I&lt;/code&gt; - Go to imenu location in all open buffers.  &lt;strong&gt;Imenu&lt;/strong&gt; is a game changer.  This lets you jump directly to function definitions by name.&lt;/p&gt;
+
+&lt;h1 id=&#34;documentation&#34;&gt;Documentation&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;SPC h d b&lt;/code&gt; - Discover key binding.  This will help you find the functionality you&amp;rsquo;re looking for.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC h d f&lt;/code&gt; - Show docstring for an elisp function.  This is very useful if you start getting into serious elisp hacking.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC h SPC&lt;/code&gt; - Show Spacemacs documentation.&lt;/p&gt;
+
+&lt;h1 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;SPC T s&lt;/code&gt; - Switch themes.  (Add the &lt;strong&gt;themes-megapack&lt;/strong&gt; layer to get a big selection.)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC T T&lt;/code&gt; - Toggle transparency.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC t TAB&lt;/code&gt; - Toggle indent guide.  If you use a language where indentation is significant, this is very useful.  Try it and see for yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC t n&lt;/code&gt; - Toggle line numbers.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;,&lt;/code&gt; - The comma is a shortcut for &lt;code&gt;SPC m&lt;/code&gt; which is where all the major mode bindings are.  Depending on what major mode you&amp;rsquo;re
+in, you may get a completely different set of commands under &lt;code&gt;SPC m&lt;/code&gt;.  However, a lot of useful functionality is organized under &lt;code&gt;SPC m&lt;/code&gt;, so &lt;code&gt;,&lt;/code&gt; gets you there with one fewer keystroke.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SPC :&lt;/code&gt; - This is a shortcut for &lt;code&gt;M-x&lt;/code&gt;.  In classic Emacs, &lt;code&gt;M-x&lt;/code&gt; was your gateway to all kinds of emacs functions, and there
+are many functions that are only reachable through this, so it&amp;rsquo;s good to know.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C-g&lt;/code&gt; - Abort!  If you find yourself in a funky state, Control-G can usually get you out of it.&lt;/p&gt;
+
+&lt;p&gt;Note that in older version of Spacemacs, it was &lt;code&gt;SPC SPC&lt;/code&gt; which was easier to type, but I think they decided to establish
+a parallel between Vim&amp;rsquo;s &lt;code&gt;:&lt;/code&gt; and Spacemacs&amp;rsquo; &lt;code&gt;SPC :&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;enjoy-spacemacs&#34;&gt;Enjoy Spacemacs&lt;/h1&gt;
+
+&lt;p&gt;Play with it.  Try these key combinations out.  Hopefully, you&amp;rsquo;ll come to appreciate how nice Spacemacs can be.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Spec-ulation</title>
@@ -25,20 +220,33 @@
 
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oyLBGkS5ICk&#34;&gt;https://www.youtube.com/watch?v=oyLBGkS5ICk&lt;/a&gt;&lt;/p&gt;
 
-&lt;style&gt;
-#content h1 {
-  margin-top: 1em;
-  border-top: 1px solid #888;
-}
-
-#content h2 {
-  font-size: 13px;
-}
-&lt;/style&gt;
-
 &lt;h1 id=&#34;tl-dw&#34;&gt;tl;dw&lt;/h1&gt;
 
-&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;
+&lt;p&gt;When Rich Hickey speaks, it&amp;rsquo;s a good idea to listen. He is able to see things
+that many of the rest of us cannot, and he is able to analyze and explain his
+thoughts with a precision that is rare even among programmers.&lt;/p&gt;
+
+&lt;p&gt;Little did I know that there was a problem with semantic versioning. It seemed
+like a reasonable system, and I never gave it a second thought until I watched
+this presentation where Rich exposed what the semantics of this system actually
+were.&lt;/p&gt;
+
+&lt;h2 id=&#34;briefly-the-semantics-of-x-y-z&#34;&gt;Briefly, the semantics of x.y.z&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;z changes - don&amp;rsquo;t care.&lt;/li&gt;
+&lt;li&gt;y changes - don&amp;rsquo;t care.&lt;/li&gt;
+&lt;li&gt;x changes - you&amp;rsquo;re screwed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s all this system can tell you.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, this system implicitly formalizes software breakage by saying if
+you change &lt;strong&gt;x&lt;/strong&gt;, you&amp;rsquo;re allowed to make backward incompatible changes.&lt;/p&gt;
+
+&lt;p&gt;However, do we have to break our software?&lt;/p&gt;
+
+&lt;p&gt;Rich points us toward another way.&lt;/p&gt;
 
 &lt;h1 id=&#34;0-00-spec-ulation-a-id-sec-1-2-name-sec-1-2-a&#34;&gt;0:00 Spec-ulation&lt;a id=&#34;sec-1-2&#34; name=&#34;sec-1-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
 
@@ -601,6 +809,17 @@ Right.&lt;/p&gt;
 &lt;h2 id=&#34;move-forward-without-burning-bridges-a-id-sec-1-48-4-name-sec-1-48-4-a&#34;&gt;Move forward without burning bridges&lt;a id=&#34;sec-1-48-4&#34; name=&#34;sec-1-48-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h2 id=&#34;create-a-lib-service-ecosystem-of-which-we-can-all-be-proud-a-id-sec-1-48-5-name-sec-1-48-5-a&#34;&gt;Create a lib/service ecosystem of which we can all be proud&lt;a id=&#34;sec-1-48-5&#34; name=&#34;sec-1-48-5&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;style&gt;
+#content h1 {
+  margin-top: 1em;
+  border-top: 1px solid #888;
+}
+
+#content h2 {
+  font-size: 13px;
+}
+&lt;/style&gt;
 </description>
     </item>
     
