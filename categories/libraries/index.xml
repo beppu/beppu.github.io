@@ -9,6 +9,200 @@
     <atom:link href="http://beppu.github.io/categories/libraries/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Writing A Timer In Clojure</title>
+      <link>http://beppu.github.io/post/writing-a-timer-in-clojure/</link>
+      <pubDate>Sun, 29 Jan 2017 07:52:08 -0800</pubDate>
+      
+      <guid>http://beppu.github.io/post/writing-a-timer-in-clojure/</guid>
+      <description>
+
+
+
+
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+
+    
+    
+        
+    
+
+
+    
+
+    
+        &lt;p&gt;&lt;span class=&#34;image center-image&#34;&gt;
+            &lt;img src=&#34;http://beppu.github.io/img/writing-a-timer-in-clojure/Timers_003.png&#34; alt=&#34;Clojure&#34; /&gt;
+        &lt;/span&gt;&lt;/p&gt;
+    
+
+
+
+&lt;h4 id=&#34;https-github-com-beppu-timer&#34;&gt;&lt;a href=&#34;https://github.com/beppu/timer&#34;&gt;https://github.com/beppu/timer&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Recently, I&amp;rsquo;ve been working on a desktop application that let&amp;rsquo;s you manage
+multiple timers.  It&amp;rsquo;s at the point where it&amp;rsquo;s ugly but it works, so I&amp;rsquo;m
+going to share what I&amp;rsquo;ve learned so far.&lt;/p&gt;
+
+&lt;h1 id=&#34;using-core-async-for-timing-and-control&#34;&gt;Using core.async For Timing And Control&lt;/h1&gt;
+
+&lt;p&gt;In this application, I have two kinds of entities:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Timer&lt;/strong&gt; - This holds a duration and an amount of time that has elapsed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alarm&lt;/strong&gt; - This is responsible for providing some kind of effect (like making a sound) when a Timer has finished.  A Timer has an Alarm.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following code comes from the &lt;code&gt;play!&lt;/code&gt; function of the timer, and this gives each running timer its own &lt;code&gt;go-loop&lt;/code&gt;.
+It multiplexes between a control channel and a timeout channel, and while it counts down ever 100ms, if a control message
+like &lt;code&gt;:pause&lt;/code&gt; or &lt;code&gt;:stop&lt;/code&gt; comes in, then the loop ends (because we don&amp;rsquo;t &lt;code&gt;recur&lt;/code&gt; anymore).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;    (go-loop []
+      (let [[c channel] (alts! [(:control @at) (timeout 100)])]
+        (if c
+          (case c
+            :pause (do (debug &amp;quot;Pause Timer&amp;quot; c))
+            :stop (do (debug &amp;quot;Stop Timer&amp;quot; c)
+                      (timer.alarm/stop! (:alarm @at))))
+          (do
+            (elapse! at)
+            (recur)))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;fixing-clj-audio&#34;&gt;Fixing clj-audio&lt;/h1&gt;
+
+&lt;p&gt;Playing audio with Clojure was a bit harder than I expected. At first, I was
+going to use Overtone, but it tended to crash when I suspended my laptop, so I
+looked around some more, and I came across
+&lt;strong&gt;&lt;a href=&#34;https://github.com/budu/clj-audio&#34;&gt;clj-audio&lt;/a&gt;&lt;/strong&gt;.  It was lightweight, and did
+exactly what I needed, but it had suffered some bitrot and no longer worked with
+contemporary versions of Clojure.&lt;/p&gt;
+
+&lt;p&gt;There was a &lt;a href=&#34;https://github.com/budu/clj-audio/pull/1&#34;&gt;pull request&lt;/a&gt; by
+&lt;strong&gt;&lt;a href=&#34;https://github.com/wmealing&#34;&gt;wmealing&lt;/a&gt;&lt;/strong&gt; that fixed this, but it was never merged
+back in by upstream.&lt;/p&gt;
+
+&lt;p&gt;I ended up forking the official clj-audio, merging in wmealing&amp;rsquo;s work, resolving the
+conflicts in that merge, and then uploading my fork to clojars.org.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://clojars.org/org.clojars.beppu/clj-audio&#34;&gt;https://clojars.org/org.clojars.beppu/clj-audio&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;seesaw-is-a-great-wrapper-for-swing&#34;&gt;seesaw Is A Great Wrapper For Swing&lt;/h1&gt;
+
+&lt;p&gt;For the UI, I ended up using &lt;strong&gt;&lt;a href=&#34;https://github.com/daveray/seesaw&#34;&gt;seesaw&lt;/a&gt;&lt;/strong&gt; by
+&lt;strong&gt;&lt;a href=&#34;https://github.com/daveray&#34;&gt;daveray&lt;/a&gt;&lt;/strong&gt;. It&amp;rsquo;s a really nice wrapper around
+Swing that significantly reduces the pain of creating UIs with Swing.  He has a good
+understanding of both Clojure and Swing, and API he created is declarative
+and pleasant to use.  It&amp;rsquo;s also documented fairly well, and there are a lot of examples
+in the github repo to learn from.&lt;/p&gt;
+
+&lt;h1 id=&#34;miglayout-is-also-amazing&#34;&gt;MigLayout Is Also Amazing&lt;/h1&gt;
+
+&lt;p&gt;Something else I came to appreciate was MigLayout which is a 3rd party layout
+library for Swing. Seesaw provides wrappers around this too, but it&amp;rsquo;s barely
+mentioned in the seesaw documentation. However, I noticed &lt;code&gt;mig-panel&lt;/code&gt; was used a
+lot in the example code and there&amp;rsquo;s a good reason why.  It works great.&lt;/p&gt;
+
+&lt;p&gt;MigLayout provides an expressive textual DSL for describing widget layouts.  It also
+provides the freedom to not care about the layout so much.  I was paralyzed for a few
+days, because I kept thinking about how I should organize the widget for each individual
+Timer, and my greatest fear was, &lt;strong&gt;&amp;ldquo;What if I changed my mind?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With MigLayout, I can change my mind all day long, because the layout can be changed
+relatively easily without massive code changes.  If any of you out there end up using
+seesaw in a project, definitely look in to MigLayout.  Although Swing has fallen out of
+fashion, MigLayout provided a great solution to a difficult problem, and I want to
+give credit where it is due.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mikaelgrev/miglayout&#34;&gt;https://github.com/mikaelgrev/miglayout&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://miglayout.com/&#34;&gt;http://miglayout.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;using-add-watch-to-update-the-ui&#34;&gt;Using add-watch To Update The UI&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://clojuredocs.org/clojure.core/add-watch&#34;&gt;&lt;code&gt;add-watch&lt;/code&gt;&lt;/a&gt; is a function that lets you
+observe a Clojure reference (like an atom) and run a function when the reference&amp;rsquo;s state
+is updated.  I wrapped all my Timers in atoms and I used &lt;code&gt;add-watch&lt;/code&gt; to attach a function
+to update the UI whenever a Timer changed.  It was convenient.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(add-watch timer :refresh (fn [k r o n] (refresh-timer! tw n)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;using-future-to-prevent-the-ui-from-blocking&#34;&gt;Using future To Prevent The UI From Blocking&lt;/h1&gt;
+
+&lt;p&gt;One minor problem that I faced was the UI becoming unresponsive while audio was
+playing due to &lt;code&gt;clj-audio.core/play!&lt;/code&gt; being a synchronous function. To make the
+Alarm more responsive to stop signals sent to it, I ended up
+using &lt;a href=&#34;https://clojuredocs.org/clojure.core/future&#34;&gt;&lt;code&gt;future&lt;/code&gt;&lt;/a&gt; to play the audio
+in a separate thread. This allowed the &lt;code&gt;go-loop&lt;/code&gt; used by each Alarm to stay
+responsive.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-clojure&#34;&gt;(defn play-with-future
+  &amp;quot;Play audio only if another audio is not already playing.&amp;quot;
+  ([file]
+   (future (audio/play (audio/-&amp;gt;stream file))))
+
+  ([file ft]
+   (if (future? ft)
+     (if (future-done? ft)
+       (play-with-future file)
+       ft)
+     (play-with-future file))
+   ))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;things-i-m-unsure-about&#34;&gt;Things I&amp;rsquo;m Unsure About&lt;/h1&gt;
+
+&lt;p&gt;I would like to get the advice of more experienced Clojure programmers on the following topics.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Naming&lt;/strong&gt; - I have 3 entities: Timer, Alarm, and App.  I gave each of them their own namespace,
+and in that namespace there is a record of the same name.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;timer.timer/Timer&lt;/li&gt;
+&lt;li&gt;timer.alarm/Alarm&lt;/li&gt;
+&lt;li&gt;timer.app/App&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The one that bothered me the most was &lt;code&gt;timer.timer/Timer&lt;/code&gt;.  Could I have organized my namespaces
+differently to avoid that unfortunately repetitive name?&lt;/p&gt;
+
+&lt;p&gt;Another naming question I had was about passing atoms around.  At first, I was tempted to prefix
+variable names with &lt;code&gt;a&lt;/code&gt; to signify that I intended for that variable to contain an atom.  Later,
+as that got to be annoying, I stopped doing that, but I felt things could become ambiguous at
+times.  Does the variable contain an atom or the raw record?&lt;/p&gt;
+
+&lt;p&gt;When working with atoms and other reference types, is it recommended to name them differently to
+signify that they are references and not plain values?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mutation&lt;/strong&gt; - Before I started, I wondered how I could organize the timer loop such that I didn&amp;rsquo;t
+have to mutate things, but that just seemed awkward.  Am I &lt;code&gt;swap!&lt;/code&gt;ing too much in this code or
+is it a reasonable amount?&lt;/p&gt;
+
+&lt;p&gt;Any insight is appreciated.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>On Choosing Frameworks</title>
       <link>http://beppu.github.io/post/on-choosing-frameworks/</link>
       <pubDate>Tue, 18 Oct 2016 14:50:07 -0700</pubDate>
