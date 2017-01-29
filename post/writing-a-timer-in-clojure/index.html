@@ -1,0 +1,922 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Writing A Timer In Clojure</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.17" />
+        
+
+
+        
+            <meta name="author" content="beppu">
+        
+        
+            <meta name="description" content="What I learned from this experience.">
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Writing A Timer In Clojure"/>
+<meta name="twitter:description" content="What I learned from this experience."/>
+<meta name="twitter:site" content="@beppu"/>
+
+
+        <meta property="og:title" content="Writing A Timer In Clojure" />
+<meta property="og:description" content="What I learned from this experience." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://beppu.github.io/post/writing-a-timer-in-clojure/" />
+
+
+<meta property="og:updated_time" content="2017-01-29T07:52:08-08:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Writing A Timer In Clojure">
+<meta itemprop="description" content="What I learned from this experience.">
+
+
+<meta itemprop="dateModified" content="2017-01-29T07:52:08-08:00" />
+<meta itemprop="wordCount" content="913">
+
+
+
+<meta itemprop="keywords" content="clojure,editors,frameworks,hugo,libraries,presentation,programming," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <link rel="stylesheet" href="/css/main.min.css" />
+                
+            
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Beppu&#39;s Blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/categories">
+                        Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://beppu.github.io/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://beppu.github.io/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://beppu.github.io/post/writing-a-timer-in-clojure/"><p>Writing A Timer In Clojure</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://beppu.github.io/post/spacemacs-tips/"><p>Spacemacs Tips</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&text=Writing%20A%20Timer%20In%20Clojure&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by beppu&body=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://beppu.github.io/post/writing-a-timer-in-clojure/">Writing A Timer In Clojure</a></h1>
+            
+        
+        
+            <p>What I learned from this experience.</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-01-29'>
+            January 29, 2017</time>
+        <span class="author">beppu</span>
+        
+            <p>5 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&text=Writing%20A%20Timer%20In%20Clojure&via=beppu" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f&title=Writing%20A%20Timer%20In%20Clojure" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by beppu&body=http%3a%2f%2fbeppu.github.io%2fpost%2fwriting-a-timer-in-clojure%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        
+
+
+
+
+    
+    
+        
+        
+        
+            
+        
+        
+            
+        
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+
+    
+    
+        
+    
+
+
+    
+
+    
+        <p><span class="image center-image">
+            <img src="/img/writing-a-timer-in-clojure/Timers_003.png" alt="Clojure" />
+        </span></p>
+    
+
+
+
+<h4 id="https-github-com-beppu-timer"><a href="https://github.com/beppu/timer">https://github.com/beppu/timer</a></h4>
+
+<p>Recently, I&rsquo;ve been working on a desktop application that let&rsquo;s you manage
+multiple timers.  It&rsquo;s at the point where it&rsquo;s ugly but it works, so I&rsquo;m
+going to share what I&rsquo;ve learned so far.</p>
+
+<h1 id="using-core-async-for-timing-and-control">Using core.async For Timing And Control</h1>
+
+<p>In this application, I have two kinds of entities:</p>
+
+<ul>
+<li><strong>Timer</strong> - This holds a duration and an amount of time that has elapsed.</li>
+<li><strong>Alarm</strong> - This is responsible for providing some kind of effect (like making a sound) when a Timer has finished.  A Timer has an Alarm.</li>
+</ul>
+
+<p>The following code comes from the <code>play!</code> function of the timer, and this gives each running timer its own <code>go-loop</code>.
+It multiplexes between a control channel and a timeout channel, and while it counts down ever 100ms, if a control message
+like <code>:pause</code> or <code>:stop</code> comes in, then the loop ends (because we don&rsquo;t <code>recur</code> anymore).</p>
+
+<pre><code class="language-clojure">    (go-loop []
+      (let [[c channel] (alts! [(:control @at) (timeout 100)])]
+        (if c
+          (case c
+            :pause (do (debug &quot;Pause Timer&quot; c))
+            :stop (do (debug &quot;Stop Timer&quot; c)
+                      (timer.alarm/stop! (:alarm @at))))
+          (do
+            (elapse! at)
+            (recur)))))
+</code></pre>
+
+<h1 id="fixing-clj-audio">Fixing clj-audio</h1>
+
+<p>Playing audio with Clojure was a bit harder than I expected. At first, I was
+going to use Overtone, but it tended to crash when I suspended my laptop, so I
+looked around some more, and I came across
+<strong><a href="https://github.com/budu/clj-audio">clj-audio</a></strong>.  It was lightweight, and did
+exactly what I needed, but it had suffered some bitrot and no longer worked with
+contemporary versions of Clojure.</p>
+
+<p>There was a <a href="https://github.com/budu/clj-audio/pull/1">pull request</a> by
+<strong><a href="https://github.com/wmealing">wmealing</a></strong> that fixed this, but it was never merged
+back in by upstream.</p>
+
+<p>I ended up forking the official clj-audio, merging in wmealing&rsquo;s work, resolving the
+conflicts in that merge, and then uploading my fork to clojars.org.</p>
+
+<p><a href="https://clojars.org/org.clojars.beppu/clj-audio">https://clojars.org/org.clojars.beppu/clj-audio</a></p>
+
+<h1 id="seesaw-is-a-great-wrapper-for-swing">seesaw Is A Great Wrapper For Swing</h1>
+
+<p>For the UI, I ended up using <strong><a href="https://github.com/daveray/seesaw">seesaw</a></strong> by
+<strong><a href="https://github.com/daveray">daveray</a></strong>. It&rsquo;s a really nice wrapper around
+Swing that significantly reduces the pain of creating UIs with Swing.  He has a good
+understanding of both Clojure and Swing, and API he created is declarative
+and pleasant to use.  It&rsquo;s also documented fairly well, and there are a lot of examples
+in the github repo to learn from.</p>
+
+<h1 id="miglayout-is-also-amazing">MigLayout Is Also Amazing</h1>
+
+<p>Something else I came to appreciate was MigLayout which is a 3rd party layout
+library for Swing. Seesaw provides wrappers around this too, but it&rsquo;s barely
+mentioned in the seesaw documentation. However, I noticed <code>mig-panel</code> was used a
+lot in the example code and there&rsquo;s a good reason why.  It works great.</p>
+
+<p>MigLayout provides an expressive textual DSL for describing widget layouts.  It also
+provides the freedom to not care about the layout so much.  I was paralyzed for a few
+days, because I kept thinking about how I should organize the widget for each individual
+Timer, and my greatest fear was, <strong>&ldquo;What if I changed my mind?&rdquo;</strong></p>
+
+<p>With MigLayout, I can change my mind all day long, because the layout can be changed
+relatively easily without massive code changes.  If any of you out there end up using
+seesaw in a project, definitely look in to MigLayout.  Although Swing has fallen out of
+fashion, MigLayout provided a great solution to a difficult problem, and I want to
+give credit where it is due.</p>
+
+<p><a href="https://github.com/mikaelgrev/miglayout">https://github.com/mikaelgrev/miglayout</a></p>
+
+<p><a href="http://miglayout.com/">http://miglayout.com/</a></p>
+
+<h1 id="using-add-watch-to-update-the-ui">Using add-watch To Update The UI</h1>
+
+<p><a href="https://clojuredocs.org/clojure.core/add-watch"><code>add-watch</code></a> is a function that lets you
+observe a Clojure reference (like an atom) and run a function when the reference&rsquo;s state
+is updated.  I wrapped all my Timers in atoms and I used <code>add-watch</code> to attach a function
+to update the UI whenever a Timer changed.  It was convenient.</p>
+
+<pre><code class="language-clojure">(add-watch timer :refresh (fn [k r o n] (refresh-timer! tw n)))
+</code></pre>
+
+<h1 id="using-future-to-prevent-the-ui-from-blocking">Using future To Prevent The UI From Blocking</h1>
+
+<p>One minor problem that I faced was the UI becoming unresponsive while audio was
+playing due to <code>clj-audio.core/play!</code> being a synchronous function. To make the
+Alarm more responsive to stop signals sent to it, I ended up
+using <a href="https://clojuredocs.org/clojure.core/future"><code>future</code></a> to play the audio
+in a separate thread. This allowed the <code>go-loop</code> used by each Alarm to stay
+responsive.</p>
+
+<pre><code class="language-clojure">(defn play-with-future
+  &quot;Play audio only if another audio is not already playing.&quot;
+  ([file]
+   (future (audio/play (audio/-&gt;stream file))))
+
+  ([file ft]
+   (if (future? ft)
+     (if (future-done? ft)
+       (play-with-future file)
+       ft)
+     (play-with-future file))
+   ))
+</code></pre>
+
+<h1 id="things-i-m-unsure-about">Things I&rsquo;m Unsure About</h1>
+
+<p>I would like to get the advice of more experienced Clojure programmers on the following topics.</p>
+
+<p><strong>Naming</strong> - I have 3 entities: Timer, Alarm, and App.  I gave each of them their own namespace,
+and in that namespace there is a record of the same name.</p>
+
+<ul>
+<li>timer.timer/Timer</li>
+<li>timer.alarm/Alarm</li>
+<li>timer.app/App</li>
+</ul>
+
+<p>The one that bothered me the most was <code>timer.timer/Timer</code>.  Could I have organized my namespaces
+differently to avoid that unfortunately repetitive name?</p>
+
+<p>Another naming question I had was about passing atoms around.  At first, I was tempted to prefix
+variable names with <code>a</code> to signify that I intended for that variable to contain an atom.  Later,
+as that got to be annoying, I stopped doing that, but I felt things could become ambiguous at
+times.  Does the variable contain an atom or the raw record?</p>
+
+<p>When working with atoms and other reference types, is it recommended to name them differently to
+signify that they are references and not plain values?</p>
+
+<p><strong>Mutation</strong> - Before I started, I wondered how I could organize the timer loop such that I didn&rsquo;t
+have to mutate things, but that just seemed awkward.  Am I <code>swap!</code>ing too much in this code or
+is it a reasonable amount?</p>
+
+<p>Any insight is appreciated.</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categoriesclojure'>clojure</a></li>
+    
+        <li><a href='/categoriesprogramming'>programming</a></li>
+    
+        <li><a href='/categorieslibraries'>libraries</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://beppu.github.io/post/spacemacs-tips/"
+                class="button big previous">Spacemacs Tips</a></li>
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'beppu';
+    var disqus_identifier = 'http:\/\/beppu.github.io\/post\/writing-a-timer-in-clojure\/';
+    var disqus_title = 'Writing A Timer In Clojure';
+    var disqus_url = 'http:\/\/beppu.github.io\/post\/writing-a-timer-in-clojure\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Beppu&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>Beppu&#39;s Blog</h2>
+                    <p>My thoughts on technology.</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://beppu.github.io/post/writing-a-timer-in-clojure/">Writing A Timer In Clojure</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-01-29'>
+                                    January 29, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://beppu.github.io/post/spacemacs-tips/">Spacemacs Tips</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-01-06'>
+                                    January 6, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /post/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/programming/">programming</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/clojure/">clojure</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/libraries/">libraries</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/editors/">editors</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/frameworks/">frameworks</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hugo/">hugo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/presentation/">presentation</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>I&#39;m currently taking a break from work to study things.</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/beppu" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/beppu" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Beppu&#39;s Blog. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <script src="/js/main.min.js"></script>
+                
+            
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+
