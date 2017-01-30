@@ -9,6 +9,89 @@
     <atom:link href="http://beppu.github.io/categories/editors/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>org-mode Basics</title>
+      <link>http://beppu.github.io/post/org-mode-basics/</link>
+      <pubDate>Mon, 30 Jan 2017 11:12:37 -0800</pubDate>
+      
+      <guid>http://beppu.github.io/post/org-mode-basics/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://orgmode.org/&#34;&gt;Org-mode&lt;/a&gt;&lt;/strong&gt; is an Emacs mode for authoring hierarchical documents.  It&amp;rsquo;s most commonly used for note
+taking and managing TODO lists. The basics are quite simple, and the default
+keybindings are quite ergonomic and intuitive.&lt;/p&gt;
+
+&lt;h1 id=&#34;basic-keybindings&#34;&gt;Basic Keybindings&lt;/h1&gt;
+
+&lt;p&gt;Let&amp;rsquo;s get started by opening a new file named &lt;code&gt;index.org&lt;/code&gt;.  Any file that ends in &lt;code&gt;.org&lt;/code&gt; will be opened in org-mode by default.&lt;/p&gt;
+
+&lt;p&gt;Try using these keybindngs as I describe them.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-RET&lt;/code&gt; - Meta-Return creates a new list item.  You can type text on this line, and you can add additional content underneath the item as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-RIGHT&lt;/code&gt; - Indent an item.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-LEFT&lt;/code&gt; - Dedent an item.  With these 3 commands, you can construct a hierarchical list.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-UP&lt;/code&gt; - Move an item up.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;M-DOWN&lt;/code&gt; - Move an item down.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;TAB&lt;/code&gt; - Cycle the visibility of an item.  If an item has sub-items, &lt;code&gt;TAB&lt;/code&gt; will collapse and expand them.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C-c .&lt;/code&gt; - Add a timestamp.  This is handy for when you&amp;rsquo;re keeping a journal.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;S-RIGHT&lt;/code&gt; - Cycle TODO state.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;S-LEFT&lt;/code&gt; - Cycle TODO state in reverse.  The default TODO states are &lt;code&gt;TODO&lt;/code&gt;, &lt;code&gt;DONE&lt;/code&gt; and nothing.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;These are the most important keybindings, and they will take you far.&lt;/p&gt;
+
+&lt;h1 id=&#34;linking-to-other-files&#34;&gt;Linking to Other Files&lt;/h1&gt;
+
+&lt;p&gt;The reason I like to start with a file called &lt;code&gt;index.org&lt;/code&gt; is because I use that as entry point for other &lt;code&gt;.org&lt;/code&gt; files.  This
+can make org-mode feel like a personal wiki.  I link to other files using the &lt;code&gt;file:$path&lt;/code&gt; notation.  Here is what my &lt;code&gt;index.org&lt;/code&gt;
+looks like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org&#34;&gt;#+TITLE Index
+* file:log.org - personal log
+* file:clojure.org - notes on Clojure
+* file:people.org - a list of people I find interesting
+* Projects
+** file:timer.org - timer implemented in Clojure
+** file:konfederation.org - generalized authentication
+** file:blog.org - my personal blog
+** file:archiver.org - self-hosted archive.is alternative
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you were to put that in an org document, those &lt;code&gt;file:&lt;/code&gt; links would be clickable.  You can also hit &lt;code&gt;RET&lt;/code&gt; while your cursor
+is on the link to open that file.  Regular URLs are clickable too.  Emacs will open the link in your web browser in that case.&lt;/p&gt;
+
+&lt;h1 id=&#34;embedding-source-code&#34;&gt;Embedding Source Code&lt;/h1&gt;
+
+&lt;p&gt;If you&amp;rsquo;re a programmer, you&amp;rsquo;ll love org-mode&amp;rsquo;s ability to embed source code.  If nothing else, it makes programming notes
+look really good, because it&amp;rsquo;s syntax highlighted correctly inside your org document.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-org&#34;&gt;#+BEGIN_SRC clojurescript
+(-&amp;gt; (fn-that-returns-a-promise)
+    (.then (fn [r] (return-another-promise)))
+    (.then (fn [r] (return-another-promise)))
+    (.catch (fn [e] (handle-your-exceptions))))
+#+END
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are advanced org-mode users who use this to do a form of literate
+programming, but I have note tried doing that yet.&lt;/p&gt;
+
+&lt;p&gt;There are many things I haven&amp;rsquo;t tried yet in org-mode. For the curious, there is
+a very thorough manual that you can read at:&lt;/p&gt;
+
+&lt;h1 id=&#34;http-orgmode-org&#34;&gt;&lt;a href=&#34;http://orgmode.org/&#34;&gt;http://orgmode.org/&lt;/a&gt;&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Spacemacs Tips</title>
       <link>http://beppu.github.io/post/spacemacs-tips/</link>
       <pubDate>Fri, 06 Jan 2017 15:17:23 -0800</pubDate>
